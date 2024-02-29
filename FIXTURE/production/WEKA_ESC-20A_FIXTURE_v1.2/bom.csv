@@ -1,0 +1,5 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"J10, J5",Pins-2.54-1x2,2,Pins_2.54_1x2,
+"J2, J3, J4, J6, J7, J8",PinHeader_1x03_P2.54mm_Vertical,6,Conn_01x03,
+"R1, R10, R11, R12, R13, R14, R15, R16, R17, R2, R3, R4, R5, R6, R7, R8, R9",R_0603,17,0R,
+"TP11, TP13, TP14, TP15, TP16, TP17, TP18, TP19, TP22, TP23, TP24, TP25, TP26, TP27, TP30, TP31, TP5, TP6, TP7",TestPoint_THTPad_D3.0mm_Drill1.5mm,19,TestPoint,

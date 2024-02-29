@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\dev\GitHub\P012-SERVO_POWER_INJECTOR\HW\SERVO_POWER_INJECTOR\SERVO_POWER_INJECTOR.kicad_sch</source>
+    <date>4/07/2022 7:32:20 pm</date>
+    <tool>Eeschema (6.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>SERVO POWER INJECTOR</title>
+        <company>CB-TECHNOLOGY</company>
+        <rev>0A</rev>
+        <date>2022-01-01</date>
+        <source>SERVO_POWER_INJECTOR.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="1K1">
+      <value>R_0603</value>
+      <footprint>R_Resistor:R_0603</footprint>
+      <fields>
+        <field name="Size">R_0603</field>
+      </fields>
+      <libsource lib="R_Resistor" part="R_0603" description=""/>
+      <property name="Size" value="R_0603"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7b62a8e2-c04b-403b-b14b-71f857e5ce97</tstamps>
+    </comp>
+    <comp ref="10K1">
+      <value>R_0603</value>
+      <footprint>R_Resistor:R_0603</footprint>
+      <fields>
+        <field name="Size">R_0603</field>
+      </fields>
+      <libsource lib="R_Resistor" part="R_0603" description=""/>
+      <property name="Size" value="R_0603"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b3e5298-c277-48b9-bc3c-ca0b2612d5a6</tstamps>
+    </comp>
+    <comp ref="10uF1">
+      <value>C_0805</value>
+      <footprint>C_Capacitor:C_0805</footprint>
+      <fields>
+        <field name="Size">C_0805</field>
+      </fields>
+      <libsource lib="C_Capacitor" part="C_0805" description=""/>
+      <property name="Size" value="C_0805"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4381634-baef-46ba-b16b-ba933d00a506</tstamps>
+    </comp>
+    <comp ref="22uF1">
+      <value>C_0805</value>
+      <footprint>C_Capacitor:C_0805</footprint>
+      <fields>
+        <field name="Size">C_0805</field>
+      </fields>
+      <libsource lib="C_Capacitor" part="C_0805" description=""/>
+      <property name="Size" value="C_0805"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8196a22e-d00b-4984-9abe-42f99fcbceeb</tstamps>
+    </comp>
+    <comp ref="30K1">
+      <value>R_0603</value>
+      <footprint>R_Resistor:R_0603</footprint>
+      <fields>
+        <field name="Size">R_0603</field>
+      </fields>
+      <libsource lib="R_Resistor" part="R_0603" description=""/>
+      <property name="Size" value="R_0603"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c499bb9-1e1a-46bc-b431-9545bb66418e</tstamps>
+    </comp>
+    <comp ref="100nF1">
+      <value>C_0603</value>
+      <footprint>C_Capacitor:C_0603</footprint>
+      <fields>
+        <field name="Size">C_0603</field>
+      </fields>
+      <libsource lib="C_Capacitor" part="C_0603" description=""/>
+      <property name="Size" value="C_0603"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a31e4e6e-f5ae-4afc-a5dd-07e5f6d1323c</tstamps>
+    </comp>
+    <comp ref="100nF2">
+      <value>C_0603</value>
+      <footprint>C_Capacitor:C_0603</footprint>
+      <fields>
+        <field name="Size">C_0603</field>
+      </fields>
+      <libsource lib="C_Capacitor" part="C_0603" description=""/>
+      <property name="Size" value="C_0603"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a34ec77c-3860-4043-8d4f-0330ae944adf</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a754b57-a470-4762-8e1d-4631ba61afb8</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x01</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x01" description="Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6fd5d0f-9626-4997-ad97-fdc103ecc6d1</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>02b39a27-2bd3-47a2-bc7b-14dab071595d</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x03</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4446d97b-f3a0-4d5f-91b4-0a0525cfc7cb</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>AZ1084CD-ADJ</value>
+      <footprint>U_IC:TO252-2</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AZ1084C.pdf</datasheet>
+      <fields>
+        <field name="Params">ADJ, 5A</field>
+      </fields>
+      <libsource lib="U_Power" part="AZ1084CD-ADJ" description="IC REG LINEAR, ADJ, 5A, TO252-2"/>
+      <property name="Params" value="ADJ, 5A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SERVO_POWER_INJECTOR.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eb8d02e9-145c-465d-b6a8-bae84d47a94b</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="C_Capacitor" part="C_0603">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_0603</field>
+        <field name="Footprint">C_Capacitor:C_0603</field>
+        <field name="Size">C_0603</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="C_Capacitor" part="C_0805">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_0805</field>
+        <field name="Footprint">C_Capacitor:C_0805</field>
+        <field name="Size">C_0805</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x01">
+      <description>Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="R_Resistor" part="R_0603">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_0603</field>
+        <field name="Footprint">R_Resistor:R_0603</field>
+        <field name="Size">R_0603</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="U_Power" part="AZ1084CD-ADJ">
+      <description>IC REG LINEAR, ADJ, 5A, TO252-2</description>
+      <docs>https://www.diodes.com/assets/Datasheets/AZ1084C.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AZ1084CD-ADJ</field>
+        <field name="Footprint">U_IC:TO252-2</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AZ1084C.pdf</field>
+        <field name="Params">ADJ, 5A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="passive"/>
+        <pin num="2" name="VOUT" type="power_out"/>
+        <pin num="3" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="C_Capacitor">
+      <uri>C:/dev/GitHub/KicadLib/C_Capacitor.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="R_Resistor">
+      <uri>C:/dev/GitHub/KicadLib/R_Resistor.kicad_sym</uri>
+    </library>
+    <library logical="U_Power">
+      <uri>C:/dev/GitHub/KicadLib/U_Power.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="100nF2" pin="1" pintype="passive"/>
+      <node ref="22uF1" pin="1" pintype="passive"/>
+      <node ref="30K1" pin="1" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VOUT" pintype="power_out"/>
+    </net>
+    <net code="2" name="/S1_IN">
+      <node ref="1K1" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="3" name="/S1_OUT">
+      <node ref="1K1" pin="2" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="100nF1" pin="2" pintype="passive"/>
+      <node ref="100nF2" pin="2" pintype="passive"/>
+      <node ref="10K1" pin="2" pintype="passive"/>
+      <node ref="10uF1" pin="2" pintype="passive"/>
+      <node ref="22uF1" pin="2" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(30K1-Pad2)">
+      <node ref="10K1" pin="1" pintype="passive"/>
+      <node ref="30K1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="ADJ" pintype="passive"/>
+    </net>
+    <net code="6" name="VCC">
+      <node ref="100nF1" pin="1" pintype="passive"/>
+      <node ref="10uF1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="7" name="unconnected-(J3-Pad2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
