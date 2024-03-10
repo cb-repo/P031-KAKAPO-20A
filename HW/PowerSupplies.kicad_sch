@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "WEKA ESC - 20A")
-    (date "2024-01-06")
-    (rev "v2.0")
+    (title "KAKAPO ESC - 20A")
+    (date "2024-03-10")
+    (rev "v1.0")
     (company "CB-TECHNOLOGY")
   )
 
@@ -150,56 +150,6 @@
         (pin passive line (at 3.81 0 180) (length 2.54)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "N_NonPart:Pad_4x2" (pin_names (offset 1.016)) (in_bom no) (on_board yes)
-      (property "Reference" "N" (at 0 -2.286 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Pad_4x2" (at -0.254 3.302 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "N_NonPart:Pad_4x2" (at 0 -2.286 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 -2.286 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Pad_4x2_0_1"
-        (polyline
-          (pts
-            (xy 1.524 0.762)
-            (xy 2.54 0)
-            (xy 1.524 -0.762)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.032 -0.762)
-            (xy 3.048 0)
-            (xy 2.032 0.762)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 0)
-            (xy 1.524 0)
-            (xy 1.27 0)
-            (xy 1.016 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "Pad_4x2_1_1"
-        (pin passive line (at -1.27 0 0) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -533,6 +483,9 @@
   (junction (at 160.02 71.755) (diameter 0) (color 0 0 0 0)
     (uuid 0dc2504d-c093-483e-ba3d-4bf9346f5bd7)
   )
+  (junction (at 161.036 118.745) (diameter 0) (color 0 0 0 0)
+    (uuid 32392e5e-665f-41b9-8698-07da9d1d0c11)
+  )
   (junction (at 178.435 118.745) (diameter 0) (color 0 0 0 0)
     (uuid 335e0572-0614-4b05-974b-5dd206a419a6)
   )
@@ -560,9 +513,6 @@
   (junction (at 160.02 80.645) (diameter 0) (color 0 0 0 0)
     (uuid a85ba630-2721-4a8a-be0e-86407bbf8df4)
   )
-  (junction (at 162.56 118.745) (diameter 0) (color 0 0 0 0)
-    (uuid a9ac6afc-eae8-41e6-a675-c64402400aa0)
-  )
   (junction (at 191.135 81.915) (diameter 0) (color 0 0 0 0)
     (uuid c2a59fcf-3e45-40ba-b045-f4ef346d1c19)
   )
@@ -572,8 +522,8 @@
   (junction (at 206.375 71.755) (diameter 0) (color 0 0 0 0)
     (uuid d230c3ae-ca16-4dcf-be96-ca8709798d14)
   )
-  (junction (at 162.56 128.905) (diameter 0) (color 0 0 0 0)
-    (uuid f491ee24-88e1-4dd8-a957-00594550e5a0)
+  (junction (at 161.036 128.905) (diameter 0) (color 0 0 0 0)
+    (uuid e4b59dc9-4ae9-43c2-9a39-7fe27a2db071)
   )
   (junction (at 123.19 128.905) (diameter 0) (color 0 0 0 0)
     (uuid f7017673-642d-49db-9718-df02777768eb)
@@ -589,10 +539,6 @@
   (wire (pts (xy 160.02 71.755) (xy 175.26 71.755))
     (stroke (width 0) (type default))
     (uuid 131c2fae-f2ca-4bee-b122-a382513337f4)
-  )
-  (wire (pts (xy 158.75 118.745) (xy 162.56 118.745))
-    (stroke (width 0) (type default))
-    (uuid 166fc11b-79a6-4674-9f7a-ac714a18dcff)
   )
   (wire (pts (xy 107.95 117.475) (xy 107.95 118.745))
     (stroke (width 0) (type default))
@@ -622,7 +568,7 @@
     (stroke (width 0) (type default))
     (uuid 2e9b60cd-be44-446f-89b6-3503ada7b8ed)
   )
-  (wire (pts (xy 162.56 118.745) (xy 178.435 118.745))
+  (wire (pts (xy 158.75 118.745) (xy 161.036 118.745))
     (stroke (width 0) (type default))
     (uuid 53e84c9f-620c-4e74-b647-c038a1d42128)
   )
@@ -678,6 +624,10 @@
     (stroke (width 0) (type default))
     (uuid 91a875c3-d100-40d2-9d70-dcd18f74484b)
   )
+  (wire (pts (xy 161.036 118.745) (xy 161.036 121.158))
+    (stroke (width 0) (type default))
+    (uuid 935c7ac3-c92e-427f-aad5-50132eea8788)
+  )
   (wire (pts (xy 158.75 71.755) (xy 160.02 71.755))
     (stroke (width 0) (type default))
     (uuid 950bb18e-1053-437e-828f-d18a01fc594c)
@@ -685,10 +635,6 @@
   (wire (pts (xy 107.95 126.365) (xy 107.95 128.905))
     (stroke (width 0) (type default))
     (uuid 99d874f4-4e2b-45b1-8cdb-6f1261f83628)
-  )
-  (wire (pts (xy 105.41 71.755) (xy 107.95 71.755))
-    (stroke (width 0) (type default))
-    (uuid 9c438f1e-16fc-4e12-85ea-2b34afd6db27)
   )
   (wire (pts (xy 160.02 74.295) (xy 160.02 71.755))
     (stroke (width 0) (type default))
@@ -706,6 +652,14 @@
     (stroke (width 0) (type default))
     (uuid a44b91ee-cdc0-4a8a-9751-a00fc5c069c1)
   )
+  (wire (pts (xy 161.036 128.905) (xy 178.435 128.905))
+    (stroke (width 0) (type default))
+    (uuid a677b8bb-0ef2-4d5c-8eb1-e278ce43c656)
+  )
+  (wire (pts (xy 161.036 126.238) (xy 161.036 128.905))
+    (stroke (width 0) (type default))
+    (uuid a6e5efe1-82f2-48d3-a371-2b7c2c28629e)
+  )
   (wire (pts (xy 123.19 121.285) (xy 123.19 118.745))
     (stroke (width 0) (type default))
     (uuid aa5d8ddb-a119-4bbb-9b98-07b611d3630d)
@@ -713,14 +667,6 @@
   (wire (pts (xy 107.95 81.915) (xy 123.19 81.915))
     (stroke (width 0) (type default))
     (uuid aac38711-ad45-447b-9208-8ba2179a2e75)
-  )
-  (wire (pts (xy 105.41 81.915) (xy 107.95 81.915))
-    (stroke (width 0) (type default))
-    (uuid b1adf8e6-904e-4d84-a7b9-6a03e5446141)
-  )
-  (wire (pts (xy 162.56 126.365) (xy 162.56 128.905))
-    (stroke (width 0) (type default))
-    (uuid b8683483-78c1-4402-8a36-1a9a0cb2248d)
   )
   (wire (pts (xy 160.02 79.375) (xy 160.02 80.645))
     (stroke (width 0) (type default))
@@ -730,17 +676,13 @@
     (stroke (width 0) (type default))
     (uuid ccc0ccb1-5935-4872-a687-d7366cfc6ae0)
   )
+  (wire (pts (xy 161.036 118.745) (xy 178.435 118.745))
+    (stroke (width 0) (type default))
+    (uuid cefa0daf-3e05-4f0a-8962-119876224f9c)
+  )
   (wire (pts (xy 178.435 126.365) (xy 178.435 128.905))
     (stroke (width 0) (type default))
     (uuid d085695f-e217-48db-92b4-416f74888e93)
-  )
-  (wire (pts (xy 147.32 128.905) (xy 162.56 128.905))
-    (stroke (width 0) (type default))
-    (uuid d34ea20b-0228-4d43-be11-8e9bb23fe3f7)
-  )
-  (wire (pts (xy 162.56 121.285) (xy 162.56 118.745))
-    (stroke (width 0) (type default))
-    (uuid d4300c25-e410-4148-9250-52a73ba2cf38)
   )
   (wire (pts (xy 191.135 71.755) (xy 191.135 74.295))
     (stroke (width 0) (type default))
@@ -786,7 +728,7 @@
     (stroke (width 0) (type default))
     (uuid f924132f-5f9a-4e2e-a71f-499722dfb6fd)
   )
-  (wire (pts (xy 162.56 128.905) (xy 178.435 128.905))
+  (wire (pts (xy 147.32 128.905) (xy 161.036 128.905))
     (stroke (width 0) (type default))
     (uuid fd113c60-2035-4e48-bbc8-511f22a6a467)
   )
@@ -2320,12 +2262,6 @@
     )
   )
 
-  (text "Solder 50V 220uF Cap\nP/N: 01EC3470\nLCSC Part: C2836445"
-    (at 67.945 80.01 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid a431563d-8e71-423a-bd07-7232f597632d)
-  )
-
   (symbol (lib_id "C_Capacitor:C_0402") (at 123.19 123.825 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 02becb44-81ab-46cd-88f6-b68c2d5dbfbd)
@@ -2350,7 +2286,7 @@
     (pin "1" (uuid 469827a5-3c51-4257-866e-d0a12794801d))
     (pin "2" (uuid ecd2d251-0a77-450d-8e50-b5eb40d8c50b))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C2") (unit 1)
         )
@@ -2382,7 +2318,7 @@
     (pin "1" (uuid 2afee108-86e1-434a-a959-d0510b04ee0f))
     (pin "2" (uuid 167c44e9-6e0b-471e-8d48-fbfbdec07e1b))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C9") (unit 1)
         )
@@ -2407,9 +2343,41 @@
     )
     (pin "1" (uuid 69330fe7-79dd-4f8a-9027-60ae80b8f475))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR06") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "C_Capacitor:C_0603") (at 191.135 76.835 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 25161e77-70b0-4967-98ff-18f3fc948cf2)
+    (property "Reference" "C1" (at 193.7258 74.9362 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "22uF 10V" (at 193.7258 77.4762 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "C_Capacitor:C_0603" (at 187.96 76.835 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 193.675 74.295 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Size" "C_0603" (at 193.7258 79.3813 0)
+      (effects (font (size 0.635 0.635)) (justify left))
+    )
+    (property "LCSC Part" "C86295" (at 191.135 76.835 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c8639aa6-e8e7-4807-97de-7e28bad2c952))
+    (pin "2" (uuid 9abb210f-6b3c-4bdd-8365-1817af4dc8bc))
+    (instances
+      (project "KAKAPO_ESC-20A"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -2432,7 +2400,7 @@
     )
     (pin "1" (uuid f9198613-7cb3-48f5-be17-0ac0ae88f7d9))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR027") (unit 1)
         )
@@ -2446,26 +2414,26 @@
     (property "Reference" "U4" (at 147.32 62.865 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "LM317EMPX/NOPB" (at 147.32 65.405 0)
+    (property "Value" "SK1117-ADJ" (at 147.32 65.405 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "U_IC:SOT223_3" (at 156.21 80.645 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm117.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1698115108720&ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Flm117" (at 143.48 92.195 0)
+    (property "Datasheet" "https://datasheet.lcsc.com/lcsc/2001081204_Shikues-Sk1117-ADJ_C475601.pdf" (at 143.48 92.195 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Params" "ADJ, 1.5A" (at 147.32 67.945 0)
+    (property "Params" "ADJ, 1.4A" (at 147.32 67.945 0)
       (effects (font (size 0.6 0.6)))
     )
-    (property "LCSC Part" "C352843" (at 147.32 76.835 0)
+    (property "LCSC Part" "C475601" (at 147.32 76.835 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 61a1d563-c877-4a28-b3da-2d4e710bd6e0))
     (pin "2" (uuid de9677c5-604b-4694-a3da-4d890964b8a4))
     (pin "3" (uuid c105f025-d3fc-445b-b4ab-a476f1cb932a))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "U4") (unit 1)
         )
@@ -2490,7 +2458,7 @@
     )
     (pin "1" (uuid 15b50689-e501-475c-a58f-dbb02e54f0a2))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR04") (unit 1)
         )
@@ -2515,7 +2483,7 @@
     )
     (pin "1" (uuid 05d56a02-d590-412c-ac32-3f89207295f8))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR032") (unit 1)
         )
@@ -2540,7 +2508,7 @@
     )
     (pin "1" (uuid 10a034c9-6c4a-44df-b01c-bf1cc3c72349))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR08") (unit 1)
         )
@@ -2554,7 +2522,7 @@
     (property "Reference" "C12" (at 110.49 121.9263 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF 10V" (at 110.49 124.4663 0)
+    (property "Value" "22uF 10V" (at 110.49 124.4663 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "C_Capacitor:C_0603" (at 104.775 123.825 90)
@@ -2566,72 +2534,15 @@
     (property "Size" "C_0603" (at 110.49 126.3713 0)
       (effects (font (size 0.635 0.635)) (justify left))
     )
-    (property "LCSC Part" "C19702" (at 107.95 123.825 0)
+    (property "LCSC Part" "C86295" (at 107.95 123.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f7fcfdb7-1ffd-4384-a72b-1194ccf148a5))
     (pin "2" (uuid 4b424590-811a-4c7f-a005-2eb37c051908))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C12") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "N_NonPart:Pad_4x2") (at 104.14 81.915 0) (mirror y) (unit 1)
-    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 620d58ac-c30f-4cb7-99fb-a4845b617a94)
-    (property "Reference" "N2" (at 100.33 80.645 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Pad_4x2" (at 100.33 83.185 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "N_NonPart:Pad_4x2" (at 104.14 84.201 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 104.14 84.201 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8fc25131-6d0a-41d2-9e53-bd865ac040c1))
-    (instances
-      (project "WEKA_ESC-20A"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
-          (reference "N2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "C_Capacitor:C_0402") (at 162.56 123.825 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7bcbea6a-bb16-424b-b74d-4c627fb79e59)
-    (property "Reference" "C4" (at 165.1 121.9263 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "100nF 50V" (at 165.1 124.4663 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "C_Capacitor:C_0402" (at 159.385 123.825 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 165.1 121.285 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Size" "C_0402" (at 165.1 126.3713 0)
-      (effects (font (size 0.635 0.635)) (justify left))
-    )
-    (property "LCSC Part" "C105882" (at 162.56 123.825 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bccf35ed-feee-42f2-8707-df66e516922d))
-    (pin "2" (uuid 9b839b6c-8846-4984-9016-ae5469859c3c))
-    (instances
-      (project "WEKA_ESC-20A"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
-          (reference "C4") (unit 1)
         )
       )
     )
@@ -2661,7 +2572,7 @@
     (pin "1" (uuid 3963a459-6c81-4842-8ea5-1e70af276c05))
     (pin "2" (uuid e0e88654-6383-4356-baef-fbb0ea91669d))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C10") (unit 1)
         )
@@ -2693,66 +2604,9 @@
     (pin "1" (uuid 54625150-baef-4de8-bcbc-97861b93b01b))
     (pin "2" (uuid 1ffa8303-dbf9-43a2-ad33-506d2a2ed03b))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "D1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "C_Capacitor:C_0402") (at 191.135 76.835 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 8ca0b7fe-6b4e-4845-93bb-d4a90db511d8)
-    (property "Reference" "C1" (at 193.7258 74.9362 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1uF 35V" (at 193.7258 77.4762 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "C_Capacitor:C_0402" (at 187.96 76.835 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 193.675 74.295 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Size" "C_0402" (at 193.7258 79.3813 0)
-      (effects (font (size 0.635 0.635)) (justify left))
-    )
-    (property "LCSC Part" "C1518208" (at 191.135 76.835 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4aeff986-ef3a-4c0f-b4e2-4f10b83d8273))
-    (pin "2" (uuid a683827e-43fd-4502-a12f-8cbb5bd7fbbc))
-    (instances
-      (project "WEKA_ESC-20A"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
-          (reference "C1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "N_NonPart:Pad_4x2") (at 104.14 71.755 0) (mirror y) (unit 1)
-    (in_bom no) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a0b2255c-c8ce-4e8c-aade-ce6c1e8d757f)
-    (property "Reference" "N1" (at 100.33 70.485 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "Pad_4x2" (at 100.33 73.025 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "N_NonPart:Pad_4x2" (at 104.14 74.041 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 104.14 74.041 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 45875abe-857c-4d48-a38b-4140d248be58))
-    (instances
-      (project "WEKA_ESC-20A"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
-          (reference "N1") (unit 1)
         )
       )
     )
@@ -2782,7 +2636,7 @@
     (pin "1" (uuid 8ef036f4-3336-436b-a632-bef831d59ce8))
     (pin "2" (uuid 7a06b2bf-de63-4eac-bc27-131039b54740))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R27") (unit 1)
         )
@@ -2807,7 +2661,7 @@
     )
     (pin "1" (uuid f09b4d24-ef6f-4c12-8c58-b12450f41f98))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR010") (unit 1)
         )
@@ -2821,7 +2675,7 @@
     (property "Reference" "C5" (at 181.61 121.9263 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF 10V" (at 181.61 124.4663 0)
+    (property "Value" "22uF 10V" (at 181.61 124.4663 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "C_Capacitor:C_0603" (at 175.26 123.825 90)
@@ -2833,13 +2687,13 @@
     (property "Size" "C_0603" (at 181.61 126.3713 0)
       (effects (font (size 0.635 0.635)) (justify left))
     )
-    (property "LCSC Part" "C19702" (at 178.435 123.825 0)
+    (property "LCSC Part" "C86295" (at 178.435 123.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 28ea88dd-be9f-4d88-8bfa-d292ed0cf1f3))
     (pin "2" (uuid 34a2967b-6ba4-4890-9172-4b503244c1c8))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C5") (unit 1)
         )
@@ -2871,9 +2725,41 @@
     (pin "1" (uuid d5d5972d-09aa-4f66-9cfe-b510d4173d9f))
     (pin "2" (uuid a4b204c5-7320-4f83-8963-125b1fcf56ac))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "C_Capacitor:C_0402") (at 161.036 123.698 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c0b028de-b973-4f75-b40c-4ec5f7bd61cb)
+    (property "Reference" "C4" (at 163.576 121.7993 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100nF 50V" (at 163.576 124.3393 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "C_Capacitor:C_0402" (at 157.861 123.698 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 163.576 121.158 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Size" "C_0402" (at 163.576 126.2443 0)
+      (effects (font (size 0.635 0.635)) (justify left))
+    )
+    (property "LCSC Part" "C105882" (at 161.036 123.698 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1d5c235d-aae7-41fd-b641-4d55dc4833c2))
+    (pin "2" (uuid 09499b2e-fcbf-4274-981e-1d99a9d87009))
+    (instances
+      (project "KAKAPO_ESC-20A"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -2910,7 +2796,7 @@
     (pin "2" (uuid d7d3a854-c757-400c-a97b-663770ba7d3f))
     (pin "3" (uuid 31882782-5a15-40e0-b971-590b760d8247))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "U3") (unit 1)
         )
@@ -2942,7 +2828,7 @@
     (pin "1" (uuid 5ed49ef0-bb6e-4cc8-81c9-fb6861f4cbce))
     (pin "2" (uuid 74305161-d77b-4f41-8ee5-8a995d5df24e))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R2") (unit 1)
         )
@@ -2967,7 +2853,7 @@
     )
     (pin "1" (uuid 6e98965c-07d2-4abe-96c9-de6d5a448ebf))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR03") (unit 1)
         )
@@ -2992,7 +2878,7 @@
     )
     (pin "1" (uuid ee1aefcd-d063-4256-a1f5-eb38c04f26d4))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR029") (unit 1)
         )
@@ -3006,7 +2892,7 @@
     (property "Reference" "C15" (at 208.9658 74.9362 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF 10V" (at 208.9658 77.4762 0)
+    (property "Value" "22uF 10V" (at 208.9658 77.4762 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "C_Capacitor:C_0603" (at 203.2 76.835 90)
@@ -3018,13 +2904,13 @@
     (property "Size" "C_0603" (at 208.9658 79.3813 0)
       (effects (font (size 0.635 0.635)) (justify left))
     )
-    (property "LCSC Part" "C19702" (at 206.375 76.835 0)
+    (property "LCSC Part" "C86295" (at 206.375 76.835 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4ead31c9-6007-4bb0-89ae-7d0f4f1e24a3))
     (pin "2" (uuid f1a75b56-b39c-4890-a45b-22303cc80ebc))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C15") (unit 1)
         )

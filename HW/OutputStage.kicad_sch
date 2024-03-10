@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "WEKA ESC - 20A")
-    (date "2024-01-06")
-    (rev "v2.0")
+    (title "KAKAPO ESC - 20A")
+    (date "2024-03-10")
+    (rev "v1.0")
     (company "CB-TECHNOLOGY")
   )
 
@@ -342,6 +342,12 @@
   (junction (at 227.965 99.695) (diameter 0) (color 0 0 0 0)
     (uuid 28373613-a422-4d17-be93-6ff6a898d6c7)
   )
+  (junction (at 68.58 89.535) (diameter 0) (color 0 0 0 0)
+    (uuid 2b3ace0f-cf5e-476f-92ac-6dffa0f958a0)
+  )
+  (junction (at 173.355 89.535) (diameter 0) (color 0 0 0 0)
+    (uuid 35e29fe9-f07e-43b5-b83e-b9c08f088fdc)
+  )
   (junction (at 202.565 100.965) (diameter 0) (color 0 0 0 0)
     (uuid 391ce0ec-7a4e-4d47-8320-51217b936627)
   )
@@ -409,6 +415,10 @@
   (wire (pts (xy 227.965 97.155) (xy 227.965 99.695))
     (stroke (width 0) (type default))
     (uuid 185029fc-da0e-445e-851e-38b99219a352)
+  )
+  (wire (pts (xy 171.45 89.535) (xy 173.355 89.535))
+    (stroke (width 0) (type default))
+    (uuid 189df420-4906-4488-9744-c9e06a8364e8)
   )
   (wire (pts (xy 97.155 100.965) (xy 98.425 100.965))
     (stroke (width 0) (type default))
@@ -534,6 +544,10 @@
     (stroke (width 0) (type default))
     (uuid 7f0a7b68-888b-4bde-8c5a-3fe75cf74723)
   )
+  (wire (pts (xy 173.355 88.265) (xy 173.355 89.535))
+    (stroke (width 0) (type default))
+    (uuid 8553bd04-a91b-4635-a07b-a7d95c87be76)
+  )
   (wire (pts (xy 109.855 69.85) (xy 109.855 84.455))
     (stroke (width 0) (type default))
     (uuid 8b2f7c94-71a6-4a5a-8ab0-e5b08dc2b570)
@@ -574,25 +588,29 @@
     (stroke (width 0) (type default))
     (uuid ba27cd29-597b-4697-be2f-76121dad41ad)
   )
-  (wire (pts (xy 171.45 89.535) (xy 203.835 89.535))
-    (stroke (width 0) (type default))
-    (uuid bc2a5079-bdef-4a22-9c3e-48082ba455a3)
-  )
   (wire (pts (xy 67.945 99.695) (xy 67.945 99.06))
     (stroke (width 0) (type default))
     (uuid bd8e2f08-c10f-417a-a308-84f7686c2e9c)
+  )
+  (wire (pts (xy 68.58 87.63) (xy 68.58 89.535))
+    (stroke (width 0) (type default))
+    (uuid c82c9dc6-2cee-4afe-b447-9e43faef4f70)
   )
   (wire (pts (xy 95.885 109.855) (xy 98.425 109.855))
     (stroke (width 0) (type default))
     (uuid c8a7f1ea-2d86-4634-930a-fbab100e06c7)
   )
-  (wire (pts (xy 66.04 89.535) (xy 98.425 89.535))
+  (wire (pts (xy 66.04 89.535) (xy 68.58 89.535))
     (stroke (width 0) (type default))
     (uuid cae012af-9953-4c0c-b424-6453738f8946)
   )
   (wire (pts (xy 121.285 104.775) (xy 122.555 104.775))
     (stroke (width 0) (type default))
     (uuid ce9f2f10-88a2-450c-8272-098a500ccaaa)
+  )
+  (wire (pts (xy 173.355 89.535) (xy 203.835 89.535))
+    (stroke (width 0) (type default))
+    (uuid d131114b-9cea-4217-bcab-90ea69e31a51)
   )
   (wire (pts (xy 121.285 99.695) (xy 122.555 99.695))
     (stroke (width 0) (type default))
@@ -637,6 +655,10 @@
   (wire (pts (xy 215.265 69.85) (xy 220.345 69.85))
     (stroke (width 0) (type default))
     (uuid f6bdee53-b34a-42c1-b457-3955732a6f38)
+  )
+  (wire (pts (xy 68.58 89.535) (xy 98.425 89.535))
+    (stroke (width 0) (type default))
+    (uuid f8cd67c4-0787-4ae2-8ace-a91485c7983a)
   )
   (wire (pts (xy 203.835 94.615) (xy 202.565 94.615))
     (stroke (width 0) (type default))
@@ -2306,7 +2328,7 @@
     )
     (pin "1" (uuid 63fb13cc-90ee-47b3-9ae1-711cd38116f1))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR039") (unit 1)
         )
@@ -2314,33 +2336,58 @@
     )
   )
 
-  (symbol (lib_id "R_Resistor:R_0402") (at 173.99 86.36 0) (mirror y) (unit 1)
+  (symbol (lib_id "R_Resistor:R_0402") (at 173.355 85.725 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 15e86a6b-79b1-4529-bc33-1aad20a23f1c)
-    (property "Reference" "R5" (at 175.9204 84.9121 0)
+    (property "Reference" "R5" (at 175.2854 84.2771 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K 1%" (at 175.895 86.6393 0)
+    (property "Value" "10K 1%" (at 175.26 86.0043 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "R_Resistor:R_0402" (at 176.53 86.36 90)
+    (property "Footprint" "R_Resistor:R_0402" (at 175.895 85.725 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 176.53 90.17 0)
+    (property "Datasheet" "" (at 175.895 89.535 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part" "C309549" (at 173.99 86.36 0)
+    (property "LCSC Part" "C309549" (at 173.355 85.725 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Size" "R_0402" (at 177.9761 88.1936 0)
+    (property "Size" "R_0402" (at 177.3411 87.5586 0)
       (effects (font (size 0.635 0.635)))
     )
     (pin "1" (uuid 1ba159f1-d101-4307-821a-3764109a256c))
     (pin "2" (uuid 924e2c4f-299e-47d5-a2f0-5a6f3de6867f))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "R5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 173.355 83.185 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1d0afdf8-4e7b-42f2-93ee-f5629487d10c)
+    (property "Reference" "#PWR044" (at 173.355 86.995 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 173.355 79.4512 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 173.355 83.185 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 173.355 83.185 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 8f6813a3-fc30-4841-a701-bef15f32467c))
+    (instances
+      (project "KAKAPO_ESC-20A"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -2363,7 +2410,7 @@
     )
     (pin "1" (uuid 57c222a6-8db9-4543-bd06-c7ad63942b22))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR017") (unit 1)
         )
@@ -2406,7 +2453,7 @@
     (pin "8" (uuid 33067186-061f-4428-87ec-7fc1c4fb6e5a))
     (pin "9" (uuid a563de3f-0a5a-480f-8970-e4c863f94a4b))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "U1") (unit 1)
         )
@@ -2431,7 +2478,7 @@
     )
     (pin "1" (uuid 39db55cc-9430-4442-b61a-b37293994f16))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR026") (unit 1)
         )
@@ -2456,7 +2503,7 @@
     )
     (pin "1" (uuid dbb2d745-e0cb-454d-8404-824f281e657f))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR015") (unit 1)
         )
@@ -2488,7 +2535,7 @@
     (pin "1" (uuid 334bff0d-3296-4ec4-98b2-5b4033a25bce))
     (pin "2" (uuid 4f2ff318-0491-4fbf-8061-bcb758b459b8))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "C28") (unit 1)
         )
@@ -2520,7 +2567,7 @@
     (pin "1" (uuid 160ba48a-25d5-47f3-80dd-28b7dd2a8104))
     (pin "2" (uuid f1a45eb9-283b-4876-89d5-be1f9771a3e7))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "R3") (unit 1)
         )
@@ -2552,7 +2599,7 @@
     (pin "1" (uuid 9e3b613b-0c56-4523-8e9d-03036ad73307))
     (pin "2" (uuid e2e2a5ed-c389-4ecc-96cd-b24230564519))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "R1") (unit 1)
         )
@@ -2560,31 +2607,31 @@
     )
   )
 
-  (symbol (lib_id "R_Resistor:R_0402") (at 68.58 86.36 0) (mirror y) (unit 1)
+  (symbol (lib_id "R_Resistor:R_0402") (at 68.58 85.09 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 753b7fec-1a49-4770-bc7b-f011189ec259)
-    (property "Reference" "R4" (at 70.5104 84.9121 0)
+    (property "Reference" "R4" (at 70.5104 83.6421 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "10K 1%" (at 70.485 86.6393 0)
+    (property "Value" "10K 1%" (at 70.485 85.3693 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "R_Resistor:R_0402" (at 71.12 86.36 90)
+    (property "Footprint" "R_Resistor:R_0402" (at 71.12 85.09 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 71.12 90.17 0)
+    (property "Datasheet" "" (at 71.12 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part" "C309549" (at 68.58 86.36 0)
+    (property "LCSC Part" "C309549" (at 68.58 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Size" "R_0402" (at 72.5661 88.1936 0)
+    (property "Size" "R_0402" (at 72.5661 86.9236 0)
       (effects (font (size 0.635 0.635)))
     )
     (pin "1" (uuid e32fafaa-5fba-463e-901c-2351d85af11c))
     (pin "2" (uuid 3c05d41c-7d7c-4ce2-8196-e55a0cee2424))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "R4") (unit 1)
         )
@@ -2609,7 +2656,7 @@
     )
     (pin "1" (uuid c1c21df2-4e86-497d-915b-539bfe61a32e))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR028") (unit 1)
         )
@@ -2634,7 +2681,7 @@
     )
     (pin "1" (uuid ebc4069a-ffb7-4b48-9d82-7a6f6bfeb272))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR038") (unit 1)
         )
@@ -2659,7 +2706,7 @@
     )
     (pin "1" (uuid 07324934-2586-470a-9538-d92236cd8aae))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR016") (unit 1)
         )
@@ -2684,7 +2731,7 @@
     )
     (pin "1" (uuid 6cb8c1f5-322c-467d-b3a4-fb2f48d20365))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR030") (unit 1)
         )
@@ -2716,7 +2763,7 @@
     (pin "1" (uuid 73581ad0-3f65-414b-b014-c8feb83df579))
     (pin "2" (uuid 8a08b02b-c86a-4470-a066-d16db4430ad2))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "C29") (unit 1)
         )
@@ -2741,7 +2788,7 @@
     )
     (pin "1" (uuid fedcba60-ba58-4e5b-b6f6-caeaf00b4198))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR019") (unit 1)
         )
@@ -2766,7 +2813,7 @@
     )
     (pin "1" (uuid eae40d3d-faf0-4b79-ae77-75eae196b603))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR018") (unit 1)
         )
@@ -2809,7 +2856,7 @@
     (pin "8" (uuid 42e14546-3086-4f35-9ff5-b53009a576a7))
     (pin "9" (uuid a9ad35a1-f331-4eef-9630-ee08ea9d0ff0))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "U2") (unit 1)
         )
@@ -2834,7 +2881,7 @@
     )
     (pin "1" (uuid 3bd74f5d-3a74-48f9-8f57-c58e4bd5337c))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR024") (unit 1)
         )
@@ -2866,7 +2913,7 @@
     (pin "1" (uuid a8b27c66-e8c3-42d1-9110-27617b0e7c2f))
     (pin "2" (uuid ad310e84-4342-46dd-ae36-561fb02e5417))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "C19") (unit 1)
         )
@@ -2891,7 +2938,7 @@
     )
     (pin "1" (uuid 314be58c-2951-40e0-954b-fbbff4721b60))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR022") (unit 1)
         )
@@ -2916,7 +2963,7 @@
     )
     (pin "1" (uuid 80875d13-f93b-4395-a4a4-5fc61b4ab202))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR011") (unit 1)
         )
@@ -2948,7 +2995,7 @@
     (pin "1" (uuid 46e2886e-8728-4b30-8b9a-f966ca2a2295))
     (pin "2" (uuid 474ee898-f30f-4356-acfe-c4b8e7027ba6))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "C20") (unit 1)
         )
@@ -2973,9 +3020,34 @@
     )
     (pin "1" (uuid 50e14a6c-79bb-4fc7-8af8-c4f776507106))
     (instances
-      (project "WEKA_ESC-20A"
+      (project "KAKAPO_ESC-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
           (reference "#PWR023") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 68.58 82.55 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e5df626f-0813-430a-a698-946693d2a1bb)
+    (property "Reference" "#PWR043" (at 68.58 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 68.58 78.8162 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 68.58 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.58 82.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a4e478e0-81d8-4e1e-9403-c042da2b566f))
+    (instances
+      (project "KAKAPO_ESC-20A"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/d37f63d1-7ddf-4854-b3a4-c1738f7e36ae"
+          (reference "#PWR043") (unit 1)
         )
       )
     )
