@@ -1,4 +1,4 @@
-22923855316410213
+22941085068392261
 A_Assembly
 Arduino_Nano_WithMountingHoles
 Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
@@ -53242,6 +53242,13 @@ SMD SMT ceramic resonator filter filter hand-soldering
 3
 3
 DS_LED
+DS_0402
+
+
+0
+2
+2
+DS_LED
 DS_0603
 
 
@@ -55307,14 +55314,35 @@ F_1206
 2
 2
 F_Fuse
-F_1812
+PF_0603
 
 
 0
 2
 2
 F_Fuse
-F_2920
+PF_0805
+
+
+0
+2
+2
+F_Fuse
+PF_1206
+
+
+0
+2
+2
+F_Fuse
+PF_1812
+
+
+0
+2
+2
+F_Fuse
+PF_2920
 
 
 0
@@ -63231,20 +63259,6 @@ Yellow 5381 Series LED
 2
 2
 L_Inductor
-ASPI-4030S
-
-
-0
-2
-2
-L_Inductor
-ASPI-6045S
-
-
-0
-2
-2
-L_Inductor
 FB_0402
 
 
@@ -63315,6 +63329,34 @@ L_0805
 2
 2
 L_Inductor
+L_1206
+
+
+0
+2
+2
+L_Inductor
+L_1210
+
+
+0
+2
+2
+L_Inductor
+L_4030S
+
+
+0
+2
+2
+L_Inductor
+L_6045S
+
+
+0
+2
+2
+L_Inductor
 L_BMRx
 FIXED IND 4.7UH 3.5A 70 MOHM SMD
 INDUCTOR
@@ -63330,6 +63372,27 @@ Mount_M3
 0
 M_Mechanical
 MouseBite-2mm
+
+
+0
+0
+0
+M_Mechanical
+PEM_M2
+
+
+0
+0
+0
+M_Mechanical
+PEM_M3
+
+
+0
+0
+0
+M_Mechanical
+PEM_M4
 
 
 0
@@ -93337,6 +93400,13 @@ TSSOP20_4.4mm
 0
 20
 20
+U_IC
+VQFN-HR-16
+
+
+0
+16
+16
 U_IC
 WSON6_05_1.5x1.5
 
