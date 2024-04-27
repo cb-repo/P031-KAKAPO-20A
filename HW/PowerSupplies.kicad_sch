@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "KAKAPO ESC - 20A")
-    (date "2024-03-10")
-    (rev "v1.0")
+    (title "KAKAPO - 20A")
+    (date "2024-04-27")
+    (rev "v0.1")
     (company "CB-TECHNOLOGY")
   )
 
@@ -616,10 +616,13 @@
   (junction (at 151.13 139.7) (diameter 0) (color 0 0 0 0)
     (uuid 3cab20fd-e101-426d-826e-211a67ad7ddd)
   )
+  (junction (at 227.965 66.675) (diameter 0) (color 0 0 0 0)
+    (uuid 45465231-0097-4a0c-b2c9-74d6a07b57ed)
+  )
   (junction (at 198.12 66.675) (diameter 0) (color 0 0 0 0)
     (uuid 55213c89-9500-400a-936a-660a75f2aa5e)
   )
-  (junction (at 228.6 66.675) (diameter 0) (color 0 0 0 0)
+  (junction (at 242.57 66.675) (diameter 0) (color 0 0 0 0)
     (uuid 5ace9dc1-ec61-4afd-9211-e757ae2ae637)
   )
   (junction (at 124.46 66.675) (diameter 0) (color 0 0 0 0)
@@ -637,7 +640,7 @@
   (junction (at 149.86 76.835) (diameter 0) (color 0 0 0 0)
     (uuid 74c025b7-873e-4e7c-91b1-cb712001462e)
   )
-  (junction (at 228.6 76.835) (diameter 0) (color 0 0 0 0)
+  (junction (at 242.57 76.835) (diameter 0) (color 0 0 0 0)
     (uuid 75ed3c89-78e2-41c9-bcf0-21f5297cf976)
   )
   (junction (at 88.9 61.595) (diameter 0) (color 0 0 0 0)
@@ -654,6 +657,9 @@
   )
   (junction (at 198.12 76.835) (diameter 0) (color 0 0 0 0)
     (uuid b9de5ed4-f9e1-49cd-9a02-ae139ee4c828)
+  )
+  (junction (at 227.965 76.835) (diameter 0) (color 0 0 0 0)
+    (uuid cdc28206-a989-499d-b7bf-4bcf9e027e89)
   )
   (junction (at 165.1 76.835) (diameter 0) (color 0 0 0 0)
     (uuid d1b75d65-1090-4a4e-b97f-4019e726f057)
@@ -698,7 +704,11 @@
     (stroke (width 0) (type default))
     (uuid 18627ffa-a84a-48c5-b973-2db8eab767f9)
   )
-  (wire (pts (xy 228.6 69.215) (xy 228.6 66.675))
+  (wire (pts (xy 227.965 76.835) (xy 242.57 76.835))
+    (stroke (width 0) (type default))
+    (uuid 1c85bdff-a7ab-4ea8-af53-d91f2600227a)
+  )
+  (wire (pts (xy 242.57 69.215) (xy 242.57 66.675))
     (stroke (width 0) (type default))
     (uuid 1d967cf5-707e-457e-82f1-8fa861bce766)
   )
@@ -734,7 +744,7 @@
     (stroke (width 0) (type default))
     (uuid 3ac08525-4f1f-4abc-806d-30c55d3f6422)
   )
-  (wire (pts (xy 228.6 97.155) (xy 228.6 76.835))
+  (wire (pts (xy 242.57 97.155) (xy 242.57 76.835))
     (stroke (width 0) (type default))
     (uuid 45bccfbb-4614-40cd-a16a-977f816efc75)
   )
@@ -822,7 +832,7 @@
     (stroke (width 0) (type default))
     (uuid 935c7ac3-c92e-427f-aad5-50132eea8788)
   )
-  (wire (pts (xy 228.6 64.135) (xy 228.6 66.675))
+  (wire (pts (xy 242.57 64.135) (xy 242.57 66.675))
     (stroke (width 0) (type default))
     (uuid 997ff634-37fb-4e5d-a0e4-a5655d5cc9ef)
   )
@@ -866,7 +876,7 @@
     (stroke (width 0) (type default))
     (uuid aa5d8ddb-a119-4bbb-9b98-07b611d3630d)
   )
-  (wire (pts (xy 228.6 76.835) (xy 228.6 74.295))
+  (wire (pts (xy 242.57 76.835) (xy 242.57 74.295))
     (stroke (width 0) (type default))
     (uuid aea281e0-ef08-4777-87f4-ec20c651bd5e)
   )
@@ -881,6 +891,10 @@
   (wire (pts (xy 88.9 69.215) (xy 88.9 71.755))
     (stroke (width 0) (type default))
     (uuid b2dfbe7e-766f-4c79-81a2-942ec4b174f9)
+  )
+  (wire (pts (xy 227.965 66.675) (xy 227.965 69.215))
+    (stroke (width 0) (type default))
+    (uuid b4f9f09f-4bb9-4aed-8608-466ff15e8cdf)
   )
   (wire (pts (xy 124.46 66.675) (xy 142.24 66.675))
     (stroke (width 0) (type default))
@@ -898,7 +912,7 @@
     (stroke (width 0) (type default))
     (uuid be11d984-b99b-4ea3-82b8-5c02ee81d903)
   )
-  (wire (pts (xy 228.6 66.675) (xy 213.36 66.675))
+  (wire (pts (xy 242.57 66.675) (xy 227.965 66.675))
     (stroke (width 0) (type default))
     (uuid c075a922-612f-4e3d-9bce-29432b99301b)
   )
@@ -942,7 +956,7 @@
     (stroke (width 0) (type default))
     (uuid dae3fa26-5822-43ad-81b1-084c8d2d76ce)
   )
-  (wire (pts (xy 213.36 76.835) (xy 228.6 76.835))
+  (wire (pts (xy 213.36 76.835) (xy 227.965 76.835))
     (stroke (width 0) (type default))
     (uuid db29db3d-68e6-4cc5-a55f-2c33e30a7e2a)
   )
@@ -957,6 +971,10 @@
   (wire (pts (xy 149.86 66.675) (xy 165.1 66.675))
     (stroke (width 0) (type default))
     (uuid e32ed89e-4311-4314-8b26-20fff963b126)
+  )
+  (wire (pts (xy 227.965 74.295) (xy 227.965 76.835))
+    (stroke (width 0) (type default))
+    (uuid e3e691e6-b7dd-4208-a17f-15ab77972f0c)
   )
   (wire (pts (xy 111.76 137.16) (xy 111.76 139.7))
     (stroke (width 0) (type default))
@@ -981,6 +999,10 @@
   (wire (pts (xy 180.34 66.675) (xy 180.34 69.215))
     (stroke (width 0) (type default))
     (uuid f36c86f4-798a-42b7-a271-b02d4a34c66c)
+  )
+  (wire (pts (xy 227.965 66.675) (xy 213.36 66.675))
+    (stroke (width 0) (type default))
+    (uuid f379ced2-f680-4e04-8ab4-f82bf504ab3d)
   )
   (wire (pts (xy 151.13 139.7) (xy 151.13 142.24))
     (stroke (width 0) (type default))
@@ -2548,7 +2570,7 @@
     (pin "1" (uuid 469827a5-3c51-4257-866e-d0a12794801d))
     (pin "2" (uuid ecd2d251-0a77-450d-8e50-b5eb40d8c50b))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C2") (unit 1)
         )
@@ -2556,31 +2578,31 @@
     )
   )
 
-  (symbol (lib_id "C_Capacitor:C_0603") (at 228.6 71.755 0) (unit 1)
+  (symbol (lib_id "C_Capacitor:C_0603") (at 242.57 71.755 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 073d17f5-15da-448d-b1b2-d647ca108273)
-    (property "Reference" "C35" (at 231.1908 69.8562 0)
+    (property "Reference" "C35" (at 245.1608 69.8562 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "22uF 10V" (at 231.1908 72.3962 0)
+    (property "Value" "22uF 10V" (at 245.1608 72.3962 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "C_Capacitor:C_0603" (at 225.425 71.755 90)
+    (property "Footprint" "C_Capacitor:C_0603" (at 239.395 71.755 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 231.14 69.215 0)
+    (property "Datasheet" "" (at 245.11 69.215 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Size" "C_0603" (at 231.1908 74.3013 0)
+    (property "Size" "C_0603" (at 245.1608 74.3013 0)
       (effects (font (size 0.635 0.635)) (justify left))
     )
-    (property "LCSC Part" "C86295" (at 228.6 71.755 0)
+    (property "LCSC Part" "C86295" (at 242.57 71.755 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d990da99-8e4c-4bfc-a5b3-66963a8279e0))
     (pin "2" (uuid 6948db9b-3e44-4789-a4c3-70e781e56b2a))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C35") (unit 1)
         )
@@ -2612,7 +2634,7 @@
     (pin "1" (uuid ef0b744c-4005-4938-a2bf-356c749d537d))
     (pin "2" (uuid c10f19c5-a7e1-436d-8048-b2a9519169c8))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C38") (unit 1)
         )
@@ -2644,7 +2666,7 @@
     (pin "1" (uuid 3fc9fc27-f5a4-425b-ac23-7ae885028c5d))
     (pin "2" (uuid 3850743a-7d1d-442f-8e1b-561c62887d55))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R23") (unit 1)
         )
@@ -2669,7 +2691,7 @@
     )
     (pin "1" (uuid fcb38c2a-70b0-41a7-a939-4046f44a5d08))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR027") (unit 1)
         )
@@ -2701,7 +2723,7 @@
     (pin "1" (uuid 90dde6e2-a176-4337-af4d-4a61f109a90f))
     (pin "2" (uuid 6fe21870-aed5-4b76-b99e-094faaf28d44))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C24") (unit 1)
         )
@@ -2733,7 +2755,7 @@
     (pin "1" (uuid 8934a093-0494-4e3a-8d8a-cffb9bd0c15f))
     (pin "2" (uuid 419eb8f3-f53b-4435-97fa-e5287ad55d68))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C37") (unit 1)
         )
@@ -2765,7 +2787,7 @@
     (pin "1" (uuid d14e86c2-0725-4a0c-ba7d-b1600f9c08b3))
     (pin "2" (uuid 6329170a-4f0f-498b-b61e-4d357b2b4062))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C6") (unit 1)
         )
@@ -2790,7 +2812,7 @@
     )
     (pin "1" (uuid b214599e-2315-412c-826e-3387b6c4ce39))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR063") (unit 1)
         )
@@ -2816,13 +2838,13 @@
     (property "Size" "R_0402" (at 128.3613 83.8274 0)
       (effects (font (size 0.635 0.635)))
     )
-    (property "LCSC Part" "" (at 124.46 81.915 0)
+    (property "LCSC Part" "C26956" (at 124.46 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bdc3daaa-447b-401a-b3cb-7b1aae536a40))
     (pin "2" (uuid fb7bbdef-a755-42ee-9f68-f9418f30dc47))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R2") (unit 1)
         )
@@ -2847,7 +2869,7 @@
     )
     (pin "1" (uuid ad40a1d6-ca7d-480c-b009-fd91cc7843a4))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR06") (unit 1)
         )
@@ -2872,7 +2894,7 @@
     )
     (pin "1" (uuid 15b50689-e501-475c-a58f-dbb02e54f0a2))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR04") (unit 1)
         )
@@ -2907,7 +2929,7 @@
     (pin "2" (uuid c1645297-6533-4431-ae6c-7422d87bcf97))
     (pin "1" (uuid 5c34fb3b-44af-41b0-bd6d-3ebeb9613bfa))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C9") (unit 1)
         )
@@ -2932,7 +2954,7 @@
     )
     (pin "1" (uuid e43c1e8f-3258-47ed-a2b8-3a26f118ec66))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR064") (unit 1)
         )
@@ -2964,7 +2986,7 @@
     (pin "1" (uuid 622cdc1b-2daa-4ee2-b43b-d31db141e912))
     (pin "2" (uuid 1a1c7a9e-80d6-42ab-8958-4480abc9576b))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R22") (unit 1)
         )
@@ -3000,9 +3022,41 @@
     (pin "6" (uuid fa7c770c-bbb9-4287-a9b4-9153cbc8fbc7))
     (pin "4" (uuid 27643f23-a77a-4288-8c41-989f26b6bfd8))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "U5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "C_Capacitor:C_0603") (at 227.965 71.755 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5dfadae3-c575-45c8-9fc2-eb0eceb2dc63)
+    (property "Reference" "C39" (at 230.5558 69.8562 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "22uF 10V" (at 230.5558 72.3962 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "C_Capacitor:C_0603" (at 224.79 71.755 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 230.505 69.215 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Size" "C_0603" (at 230.5558 74.3013 0)
+      (effects (font (size 0.635 0.635)) (justify left))
+    )
+    (property "LCSC Part" "C86295" (at 227.965 71.755 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 5164039a-5b8a-4787-a9d8-55101486ab77))
+    (pin "2" (uuid 29c475a1-b809-4fb4-9773-7a213900a334))
+    (instances
+      (project "KAKAPO-20A"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -3032,7 +3086,7 @@
     (pin "1" (uuid 2d764471-7dc0-4ddc-90f3-c7164978cf34))
     (pin "2" (uuid 8bce6353-fb88-4725-a9a1-ffa016541b82))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C31") (unit 1)
         )
@@ -3057,7 +3111,7 @@
     )
     (pin "1" (uuid 5dc136ee-fa0b-4772-9b27-dbe2fbcc96f1))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR03") (unit 1)
         )
@@ -3089,7 +3143,7 @@
     (pin "1" (uuid 563dda81-fad2-4c45-beb5-8cf91430e574))
     (pin "2" (uuid 66ef153f-a252-4109-98fb-860def3c4c85))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C33") (unit 1)
         )
@@ -3115,16 +3169,16 @@
     (property "Size" "L_4.2x4.2" (at 144.78 65.3647 90)
       (effects (font (size 0.635 0.635)))
     )
-    (property "LCSC_Part" "C2921165" (at 144.78 66.675 90)
+    (property "LCSC Part" "C2921165" (at 144.78 66.675 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MFG_Part" "BCIHP0420SC-1R5M" (at 144.78 66.675 90)
+    (property "MFG Part" "BCIHP0420SC-1R5M" (at 144.78 66.675 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "2" (uuid c10bec16-1052-4e67-8e81-a3c036ad66d5))
     (pin "1" (uuid ea76407c-b6b2-468a-8c29-5216d892ab58))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "L1") (unit 1)
         )
@@ -3132,24 +3186,24 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 228.6 64.135 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 242.57 64.135 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7b5c2897-4a2a-4c2b-baa4-a8b74d2f2a0e)
-    (property "Reference" "#PWR061" (at 228.6 67.945 0)
+    (property "Reference" "#PWR061" (at 242.57 67.945 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 228.6 60.6331 0)
+    (property "Value" "+5V" (at 242.57 60.6331 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 228.6 64.135 0)
+    (property "Footprint" "" (at 242.57 64.135 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 228.6 64.135 0)
+    (property "Datasheet" "" (at 242.57 64.135 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 9bc4f7b8-771d-4527-8a91-60ecb66e2d24))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR061") (unit 1)
         )
@@ -3181,7 +3235,7 @@
     (pin "1" (uuid 9996e807-048a-4352-8033-1b1544b8b1dc))
     (pin "2" (uuid 9ab0767b-b85c-4915-bf08-19f2960d8783))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C16") (unit 1)
         )
@@ -3206,7 +3260,7 @@
     )
     (pin "1" (uuid ab62ac5d-3cb7-4be6-a647-1b4a07733a23))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR08") (unit 1)
         )
@@ -3238,7 +3292,7 @@
     (pin "1" (uuid 68962ed3-ed31-476e-a87f-05f7aa3f478a))
     (pin "2" (uuid 03a906a2-6703-4212-b248-08305367d446))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "D1") (unit 1)
         )
@@ -3263,7 +3317,7 @@
     )
     (pin "1" (uuid f09b4d24-ef6f-4c12-8c58-b12450f41f98))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR010") (unit 1)
         )
@@ -3295,7 +3349,7 @@
     (pin "1" (uuid 6dcd9182-e7d3-4049-b4ec-90900b479baa))
     (pin "2" (uuid 20db25af-4f2c-4da3-b8fd-91ff392ed5b9))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C34") (unit 1)
         )
@@ -3327,7 +3381,7 @@
     (pin "1" (uuid 28ea88dd-be9f-4d88-8bfa-d292ed0cf1f3))
     (pin "2" (uuid 34a2967b-6ba4-4890-9172-4b503244c1c8))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C5") (unit 1)
         )
@@ -3353,13 +3407,13 @@
     (property "Size" "R_0402" (at 169.0013 73.6674 0)
       (effects (font (size 0.635 0.635)))
     )
-    (property "LCSC Part" "" (at 165.1 71.755 0)
+    (property "LCSC Part" "C3013150" (at 165.1 71.755 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c4a75ae7-f4e2-4b75-bf41-b013c9bd817c))
     (pin "2" (uuid 314d8f2c-3db9-4b68-8292-6366fb2b2e54))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "R21") (unit 1)
         )
@@ -3367,24 +3421,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 228.6 97.155 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 242.57 97.155 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c08942b8-29a5-4e9a-8dbd-2987172c03f1)
-    (property "Reference" "#PWR062" (at 228.6 103.505 0)
+    (property "Reference" "#PWR062" (at 242.57 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 228.6 101.219 0)
+    (property "Value" "GND" (at 242.57 101.219 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 228.6 97.155 0)
+    (property "Footprint" "" (at 242.57 97.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 228.6 97.155 0)
+    (property "Datasheet" "" (at 242.57 97.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8315afb3-efd3-47c8-9216-88bdd409300e))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR062") (unit 1)
         )
@@ -3416,7 +3470,7 @@
     (pin "1" (uuid 1d5c235d-aae7-41fd-b641-4d55dc4833c2))
     (pin "2" (uuid 09499b2e-fcbf-4274-981e-1d99a9d87009))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C4") (unit 1)
         )
@@ -3455,7 +3509,7 @@
     (pin "2" (uuid d7d3a854-c757-400c-a97b-663770ba7d3f))
     (pin "3" (uuid 31882782-5a15-40e0-b971-590b760d8247))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "U3") (unit 1)
         )
@@ -3480,7 +3534,7 @@
     )
     (pin "1" (uuid d1e68d43-4fc5-4bb7-8c15-32750887a597))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "#PWR029") (unit 1)
         )
@@ -3512,7 +3566,7 @@
     (pin "1" (uuid d6b65fc6-f218-453a-aa25-fb44d9385702))
     (pin "2" (uuid 73ac7156-6498-4072-8fab-22e4b3fca91f))
     (instances
-      (project "KAKAPO_ESC-20A"
+      (project "KAKAPO-20A"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/03150d69-6f18-4d51-8d71-36ae3eb90643"
           (reference "C1") (unit 1)
         )

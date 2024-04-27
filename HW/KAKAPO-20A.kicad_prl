@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 47,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -66,11 +66,11 @@
       35,
       36
     ],
-    "visible_layers": "fffffaf_ffffffff",
-    "zone_display_mode": 1
+    "visible_layers": "fffffbf_ffffffff",
+    "zone_display_mode": 0
   },
   "meta": {
-    "filename": "KAKAPO_ESC-20A.kicad_prl",
+    "filename": "KAKAPO-20A.kicad_prl",
     "version": 3
   },
   "project": {
