@@ -2980,7 +2980,7 @@
     (property "Size" "R_0402" (at 169.0013 83.8274 0)
       (effects (font (size 0.635 0.635)))
     )
-    (property "LCSC Part" "C226367" (at 165.1 81.915 0)
+    (property "LCSC Part" "" (at 165.1 81.915 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 622cdc1b-2daa-4ee2-b43b-d31db141e912))
