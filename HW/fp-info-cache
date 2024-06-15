@@ -1,4 +1,4 @@
-22941085068392261
+22942801066230316
 A_Assembly
 Arduino_Nano_WithMountingHoles
 Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
@@ -65997,6 +65997,13 @@ PCB Finger 4x6mm M1
 1
 N_NonPart
 Finger_3.5x6_M1
+PCB Finger 4x6mm M1
+
+0
+1
+1
+N_NonPart
+Finger_3x4_M1
 PCB Finger 4x6mm M1
 
 0
