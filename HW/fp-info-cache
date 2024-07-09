@@ -1,4 +1,4 @@
-22942801066230316
+22944519758666425
 A_Assembly
 Arduino_Nano_WithMountingHoles
 Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
@@ -93169,6 +93169,13 @@ igbt diode module
 0
 25
 25
+U_IC
+DFN6_05_2x2_EP
+
+
+0
+7
+7
 U_IC
 DFN8_05_2x2_EP
 
