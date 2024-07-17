@@ -68,17 +68,17 @@ int main ( void ) {
 	RADIO_Init();
 	MOTOR_Init();
 
-	CORE_Delay(900); // Not noticible to people but should allow voltage recovery. Could update this to only happen under brownout condition
+//	CORE_Delay(900); // Not noticible to people but should allow voltage recovery. Could update this to only happen under brownout condition
 
-	BATT_Init();
-
-	uint32_t tick = CORE_GetTick();
-	while ( (CORE_GetTick() - tick) < 100 ) {
-		BATT_Update();
-		TEMP_Update();
-		RADIO_Update();
-		CORE_Idle();
-	}
+//	BATT_Init();
+//
+//	uint32_t tick = CORE_GetTick();
+//	while ( (CORE_GetTick() - tick) < 100 ) {
+//		BATT_Update();
+//		TEMP_Update();
+//		RADIO_Update();
+//		CORE_Idle();
+//	}
 
 
 //	MOTOR_StartupBuzz();
@@ -86,15 +86,15 @@ int main ( void ) {
 	// Loop To Infinity and Beyond
 	while(1)
 	{
-		// Update Input Modules
-		BATT_Update();
-		TEMP_Update();
-		RADIO_Update();
-		LED_Update();
-
-		// Run System Updates
-		SYSTEM_Update();
-		MOTOR_Update();
+//		// Update Input Modules
+//		BATT_Update();
+//		TEMP_Update();
+//		RADIO_Update();
+//		LED_Update();
+//
+//		// Run System Updates
+//		SYSTEM_Update();
+//		MOTOR_Update();
 
 		// Loop Pacing
 		CORE_Idle();

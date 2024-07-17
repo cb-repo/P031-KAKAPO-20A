@@ -15,7 +15,7 @@
 #include "Battery.h"
 #include "Temperature.h"
 #include "Radio.h"
-//#include "Motor.h"
+#include "Motor.h"
 #include "LED.h"
 #include "FPROM.h"
 

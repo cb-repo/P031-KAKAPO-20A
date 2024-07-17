@@ -40,7 +40,7 @@ typedef enum {
 	radioCH1,
 	radioCH2,
 	radioCH3,
-	radioch4,
+	radioCH4,
 } RADIO_chArrayIndex;
 
 
@@ -48,23 +48,35 @@ typedef enum {
 /* PRIVATE PROTOTYPES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+bool 		RADIO_inFaultStateCH1 	( void );
+bool 		RADIO_inFaultStateCH2 	( void );
+#if RADIO_NUM_CHANNELS >= 3
+bool 		RADIO_inFaultStateCH3 	( void );
+#if RADIO_NUM_CHANNELS >= 4
+bool 		RADIO_inFaultStateCH4 	( void );
+#endif
+#endif
 
-uint32_t RADIO_truncate(uint32_t);
-void RADIO_processChannel(uint8_t);
+uint32_t	RADIO_truncate			( uint32_t );
+void 		RADIO_processChannel	( uint8_t );
 
-static void RADIO_CH1_IRQ(void);
-static void RADIO_CH2_IRQ(void);
-
+static void RADIO_CH1_IRQ			( void );
+static void RADIO_CH2_IRQ			( void );
+#if RADIO_NUM_CHANNELS >= 3
+static void RADIO_CH3_IRQ			( void );
+#if RADIO_NUM_CHANNELS >= 4
+static void RADIO_CH4_IRQ			( void );
+#endif
+#endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PRIVATE VARIABLES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-static bool initialised = false;
-
-static volatile uint32_t rx[RADIO_NUM_CHANNELS];
-RADIO_Data data;
+static bool 				initialised = false;
+static volatile uint32_t	rx[RADIO_NUM_CHANNELS];
+RADIO_Data 					data;
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -93,6 +105,14 @@ void RADIO_Init(void) {
 	GPIO_OnChange(RADIO_PWM1_Pin, GPIO_IT_Both, RADIO_CH1_IRQ);
 	GPIO_EnableInput(RADIO_PWM2_Pin, GPIO_Pull_Down);
 	GPIO_OnChange(RADIO_PWM2_Pin, GPIO_IT_Both, RADIO_CH2_IRQ);
+	#if RADIO_NUM_CHANNELS >= 3
+	GPIO_EnableInput(RADIO_PWM3_Pin, GPIO_Pull_Down);
+	GPIO_OnChange(RADIO_PWM3_Pin, GPIO_IT_Both, RADIO_CH3_IRQ);
+	#if RADIO_NUM_CHANNELS >= 4
+	GPIO_EnableInput(RADIO_PWM4_Pin, GPIO_Pull_Down);
+	GPIO_OnChange(RADIO_PWM4_Pin, GPIO_IT_Both, RADIO_CH4_IRQ);
+	#endif
+	#endif
 
 	// SET RELEVANT FLAGS
 	initialised = true;
@@ -177,32 +197,15 @@ RADIO_Data* RADIO_getDataPtr ( void )
 /*
  *
  */
-bool RADIO_inFaultStateCH1 ( void ) {
-	if ( !initialised || (initialised && data.inputLostCh[radioCH1]) ) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-
-/*
- *
- */
-bool RADIO_inFaultStateCH2 ( void ) {
-	if ( !initialised || (initialised && data.inputLostCh[radioCH2]) ) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-
-/*
- *
- */
-bool RADIO_inFaultStateFULL ( void ) {
+bool RADIO_inFaultStateFULL ( void )
+{
+#if RADIO_NUM_CHANNELS >= 4
+	if ( RADIO_inFaultStateCH1() && RADIO_inFaultStateCH2() && RADIO_inFaultStateCH3() && RADIO_inFaultStateCH4() ) {
+#elif RADIO_NUM_CHANNELS >= 3
+	if ( RADIO_inFaultStateCH1() && RADIO_inFaultStateCH2() && RADIO_inFaultStateCH3() ) {
+#else
 	if ( RADIO_inFaultStateCH1() && RADIO_inFaultStateCH2() ) {
+#endif
 		return true;
 	} else {
 		return false;
@@ -213,8 +216,15 @@ bool RADIO_inFaultStateFULL ( void ) {
 /*
  *
  */
-bool RADIO_inFaultStateANY ( void ) {
+bool RADIO_inFaultStateANY ( void )
+{
+#if RADIO_NUM_CHANNELS >= 4
+	if ( RADIO_inFaultStateCH1() || RADIO_inFaultStateCH2() || RADIO_inFaultStateCH3() || RADIO_inFaultStateCH4() ) {
+#elif RADIO_NUM_CHANNELS >= 3
+	if ( RADIO_inFaultStateCH1() || RADIO_inFaultStateCH2() || RADIO_inFaultStateCH3() ) {
+#else
 	if ( RADIO_inFaultStateCH1() || RADIO_inFaultStateCH2() ) {
+#endif
 		return true;
 	} else {
 		return false;
@@ -225,6 +235,61 @@ bool RADIO_inFaultStateANY ( void ) {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PRIVATE FUNCTIONS									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/*
+ *
+ */
+bool RADIO_inFaultStateCH1 ( void )
+{
+	if ( !initialised || (initialised && data.inputLostCh[radioCH1]) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+
+/*
+ *
+ */
+bool RADIO_inFaultStateCH2 ( void )
+{
+	if ( !initialised || (initialised && data.inputLostCh[radioCH2]) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/*
+ *
+ */
+#if RADIO_NUM_CHANNELS >= 3
+bool RADIO_inFaultStateCH3 ( void )
+{
+	if ( !initialised || (initialised && data.inputLostCh[radioCH2]) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+#endif
+
+/*
+ *
+ */
+#if RADIO_NUM_CHANNELS >= 4
+bool RADIO_inFaultStateCH4 ( void )
+{
+	if ( !initialised || (initialised && data.inputLostCh[radioCH2]) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+#endif
 
 
 /*
@@ -344,6 +409,66 @@ static void RADIO_CH2_IRQ ( void )
 	}
 	pos_p = pos;
 }
+
+#if RADIO_NUM_CHANNELS >= 3
+static void RADIO_CH3_IRQ ( void )
+{
+	bool pos = GPIO_Read(RADIO_PWM3_Pin);
+	uint32_t now = TIM_Read(TIM_RADIO);
+	uint32_t pulse = 0;
+	uint32_t period = 0;
+	static bool pos_p = false;
+	static uint32_t tickHigh = 0;
+	static uint32_t tickLow = 0;
+
+	if ( pos_p != pos )
+	{
+		if ( pos ) {
+			tickHigh = now;
+		} else {
+			period = now - tickLow;
+			pulse = now - tickHigh;
+			if ( pulse <= PWM_WIDTH_ABSMAX_US 	&& pulse >= PWM_WIDTH_ABSMIN_US &&
+				 period <= PWM_PERIOD_MAX_US	&& period >= PWM_PERIOD_MIN_US )
+			{
+				rx[radioCH3] = pulse;
+			}
+			tickLow = now;
+		}
+	}
+	pos_p = pos;
+}
+#endif
+
+#if RADIO_NUM_CHANNELS >= 4
+static void RADIO_CH4_IRQ ( void )
+{
+	bool pos = GPIO_Read(RADIO_PWM4_Pin);
+	uint32_t now = TIM_Read(TIM_RADIO);
+	uint32_t pulse = 0;
+	uint32_t period = 0;
+	static bool pos_p = false;
+	static uint32_t tickHigh = 0;
+	static uint32_t tickLow = 0;
+
+	if ( pos_p != pos )
+	{
+		if ( pos ) {
+			tickHigh = now;
+		} else {
+			period = now - tickLow;
+			pulse = now - tickHigh;
+			if ( pulse <= PWM_WIDTH_ABSMAX_US 	&& pulse >= PWM_WIDTH_ABSMIN_US &&
+				 period <= PWM_PERIOD_MAX_US	&& period >= PWM_PERIOD_MIN_US )
+			{
+				rx[radioCH4] = pulse;
+			}
+			tickLow = now;
+		}
+	}
+	pos_p = pos;
+}
+#endif
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

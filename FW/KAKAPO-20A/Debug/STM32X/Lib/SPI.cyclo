@@ -1,0 +1,11 @@
+../STM32X/Lib/GPIO.inl.h:16:20:GPIO_Deinit	1
+../STM32X/Lib/CLK.inl.h:15:24:CLK_GetPCLKFreq	1
+../STM32X/Lib/SPI.c:53:6:SPI_Init	1
+../STM32X/Lib/SPI.c:82:6:SPI_Deinit	1
+../STM32X/Lib/SPI.c:88:6:SPI_Write	4
+../STM32X/Lib/SPI.c:99:6:SPI_Read	5
+../STM32X/Lib/SPI.c:112:6:SPI_Transfer	5
+../STM32X/Lib/SPI.c:125:9:SPI_TransferByte	3
+../STM32X/Lib/SPI.c:137:17:SPI_SelectPrescalar	3
+../STM32X/Lib/SPI.c:155:13:SPIx_Init	2
+../STM32X/Lib/SPI.c:180:13:SPIx_Deinit	2

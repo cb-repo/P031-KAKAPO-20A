@@ -64,39 +64,53 @@
 
 // GPIO config
 #define GPIO_USE_IRQS
-#define GPIO_IRQ1_ENABLE
-#define GPIO_IRQ2_ENABLE
+#define GPIO_IRQ6_ENABLE
+#define GPIO_IRQ8_ENABLE
+#define GPIO_IRQ9_ENABLE
+#define GPIO_IRQ10_ENABLE
 
 // RADIO INPUTS
-#define RADIO_NUM_CHANNELS		2
-#define RADIO_PWM1_Pin			PA1
-#define RADIO_PWM2_Pin			PA2
+#define RADIO_NUM_CHANNELS		4
+
+#if RADIO_NUM_CHANNELS >= 2
+#define RADIO_PWM1_Pin			PA8
+#define RADIO_PWM2_Pin			PA9
+#if RADIO_NUM_CHANNELS >= 3
+#define RADIO_PWM3_Pin			PC6
+#if RADIO_NUM_CHANNELS >= 4
+#define RADIO_PWM4_Pin			PA10
+#endif
+#endif
+#else
+#error "Minimum: x2 Radio Inputs Defined"
+#endif
+
 
 // MOTOR
-#define MOTOR_SPI_CLK		PA5
-#define MOTOR_SPI_MOSI		PA7
-#define MOTOR_SPI_MISO		PA6
-#define MOTORA_Select		PA8
-#define MOTORA_Fault		PA11
-#define MOTORA_Sense		PA4
-#define MOTORA_Sense_Ch		ADC_Channel_4
-#define MOTORB_Select		PC14
-#define MOTORB_Fault		PB7
-#define MOTORB_Sense		PA0
-#define MOTORB_Sense_Ch		ADC_Channel_0
+#define MOTOR_SPI_CLK		PB3
+#define MOTOR_SPI_MOSI		PB5
+#define MOTOR_SPI_MISO		PB4
+#define MOTORA_Select		PB9
+#define MOTORA_Fault		PB7
+#define MOTORA_Sense		PA11
+#define MOTORA_Sense_Ch		ADC_Channel_11
+#define MOTORB_Select		PA15
+#define MOTORB_Fault		PB6
+#define MOTORB_Sense		PA12
+#define MOTORB_Sense_Ch		ADC_Channel_12
 
-#define SPI1_GPIO		    GPI0A
-#define SPI1_PINS		    (GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7)
+#define SPI1_GPIO		    GPI0B
+#define SPI1_PINS		    (GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5)
 #define SPI1_AF			    GPIO_AF0_SPI1
 
 // LED O/P
-#define LED_PWR_Pin			PB6
-#define LED_M1_Pin			PA3
-#define LED_M2_Pin			PC15
+//#define LED_PWR_Pin		PB6
+#define LED_M1_Pin			PA0
+#define LED_M2_Pin			PB0
 
 // BATTERY DETECT
-#define BATT_Pin			PA12
-#define BATT_Ch      		ADC_Channel_12
+#define BATT_Pin			PA1
+#define BATT_Ch      		ADC_Channel_1
 #define BATT_Rlow			10
 #define BATT_Rhigh			100
 

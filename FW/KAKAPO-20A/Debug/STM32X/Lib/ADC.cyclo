@@ -1,0 +1,12 @@
+../STM32X/Lib/ADC.c:178:6:ADC_Init	2
+../STM32X/Lib/ADC.c:221:10:ADC_SetFreq	1
+../STM32X/Lib/ADC.c:259:10:ADC_Read	1
+../STM32X/Lib/ADC.c:278:6:ADC_Deinit	2
+../STM32X/Lib/ADC.c:304:10:AIN_AinToDivider	1
+../STM32X/Lib/ADC.c:309:10:AIN_AinToMv	1
+../STM32X/Lib/ADC.c:314:9:ADC_ReadDieTemp	1
+../STM32X/Lib/ADC.c:330:10:ADC_ReadVRef	1
+../STM32X/Lib/ADC.c:379:13:ADC_StopConversion	3
+../STM32X/Lib/ADC.c:391:13:ADC_WaitForFlag	2
+../STM32X/Lib/ADC.c:396:13:ADC_Calibrate	2
+../STM32X/Lib/ADC.c:403:17:ADC_SelectSampleTime	3

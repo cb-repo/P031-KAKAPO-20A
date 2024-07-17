@@ -1,0 +1,7 @@
+../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	1
+../Core/Src/Temperature.c:55:6:TEMP_Init	2
+../Core/Src/Temperature.c:72:6:TEMP_Deinit	1
+../Core/Src/Temperature.c:82:6:TEMP_Update	11
+../Core/Src/Temperature.c:156:6:TEMP_inFaultState	1
+../Core/Src/Temperature.c:169:13:TEMP_calcStartup	2
+../Core/Src/Temperature.c:186:17:TEMP_calc	2

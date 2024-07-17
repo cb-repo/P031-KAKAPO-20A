@@ -1,0 +1,15 @@
+../STM32X/Lib/CLK.inl.h:15:24:CLK_GetPCLKFreq	8	static
+../STM32X/Lib/UART.c:94:6:UART_Init	64	static
+../STM32X/Lib/UART.c:151:6:UART_Deinit	16	static
+../STM32X/Lib/UART.c:167:6:UART_Write	32	static
+../STM32X/Lib/UART.c:185:6:UART_WriteStr	16	static
+../STM32X/Lib/UART.c:190:10:UART_ReadCount	24	static
+../STM32X/Lib/UART.c:199:10:UART_Read	40	static
+../STM32X/Lib/UART.c:219:10:UART_Seek	32	static
+../STM32X/Lib/UART.c:234:9:UART_Pop	32	static
+../STM32X/Lib/UART.c:242:6:UART_ReadFlush	16	static
+../STM32X/Lib/UART.c:249:6:UART_WriteFlush	16	static
+../STM32X/Lib/UART.c:257:10:UART_WriteCount	24	static
+../STM32X/Lib/UART.c:272:13:UARTx_Init	16	static
+../STM32X/Lib/UART.c:330:13:UARTx_Deinit	16	static
+../STM32X/Lib/UART.c:388:6:UART_IRQHandler	24	static

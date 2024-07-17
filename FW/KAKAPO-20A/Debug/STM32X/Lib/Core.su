@@ -1,0 +1,15 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:987:34:__NVIC_SystemReset	8	static,ignoring_inline_asm
+../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	8	static
+../STM32X/Lib/GPIO.inl.h:16:20:GPIO_Deinit	16	static
+../STM32X/Lib/CLK.inl.h:10:24:CLK_GetHCLKFreq	8	static
+../STM32X/Lib/Core.c:78:6:CORE_Init	16	static
+../STM32X/Lib/Core.c:109:33:CORE_Idle	8	static,ignoring_inline_asm
+../STM32X/Lib/Core.c:120:6:CORE_Stop	8	static,ignoring_inline_asm
+../STM32X/Lib/Core.c:153:6:CORE_Delay	24	static
+../STM32X/Lib/Core.c:163:6:CORE_Reset	8	static
+../STM32X/Lib/Core.c:169:6:CORE_OnTick	16	static
+../STM32X/Lib/Core.c:175:20:CORE_GetResetSource	16	static
+../STM32X/Lib/Core.c:229:6:CORE_InitSysTick	8	static
+../STM32X/Lib/Core.c:235:6:CORE_InitGPIO	24	static
+../STM32X/Lib/Core.c:261:10:HAL_GetTick	8	static
+../STM32X/Lib/Core.c:270:6:SysTick_Handler	8	static

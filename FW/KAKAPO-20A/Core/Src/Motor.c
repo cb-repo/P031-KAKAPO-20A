@@ -50,7 +50,7 @@ typedef struct {
 
 static uint32_t MOTOR_ReverseRadio 	( uint32_t );
 static uint32_t	MOTOR_Truncate		( uint32_t );
-static void		MOTOR_Process		( uint32_t, MOTOR_chStats* ); //uint32_t*, uint32_t*, bool*, bool* );
+static void		MOTOR_Process		( uint32_t, MOTOR_chStats* );
 
 void 			MOTOR_ReloadM1_ISR 	( void );
 void 			MOTOR_PulseM1_ISR 	( void );
@@ -209,17 +209,17 @@ void MOTOR_Init ( void )
 	SPI_Write( SPI_1, tx, TX_BUFF_SIZE );
 	GPIO_Set( MOTORB_Select );
 
-	// START TIMER TO ...
-	TIM_Init( 		TIM_MOTORA, TIM_MOTORA_FREQ, TIM_MOTORA_RELOAD );
-	TIM_OnReload( 	TIM_MOTORA, MOTOR_ReloadM1_ISR );
-	TIM_OnPulse( 	TIM_MOTORA, TIM_MOTORA_CH, MOTOR_PulseM1_ISR );
-	TIM_SetPulse(	TIM_MOTORA, TIM_MOTORA_CH, M1.speed );
-	TIM_Start(		TIM_MOTORA );
-	TIM_Init( 		TIM_MOTORB, TIM_MOTORB_FREQ, TIM_MOTORB_RELOAD );
-	TIM_OnReload( 	TIM_MOTORB, MOTOR_ReloadM2_ISR );
-	TIM_OnPulse( 	TIM_MOTORB, TIM_MOTORB_CH, MOTOR_PulseM2_ISR );
-	TIM_SetPulse(	TIM_MOTORB, TIM_MOTORB_CH, M2.speed );
-	TIM_Start(		TIM_MOTORB );
+//	// START TIMER TO ...
+//	TIM_Init( 		TIM_MOTORA, TIM_MOTORA_FREQ, TIM_MOTORA_RELOAD );
+//	TIM_OnReload( 	TIM_MOTORA, MOTOR_ReloadM1_ISR );
+//	TIM_OnPulse( 	TIM_MOTORA, TIM_MOTORA_CH, MOTOR_PulseM1_ISR );
+//	TIM_SetPulse(	TIM_MOTORA, TIM_MOTORA_CH, M1.speed );
+//	TIM_Start(		TIM_MOTORA );
+//	TIM_Init( 		TIM_MOTORB, TIM_MOTORB_FREQ, TIM_MOTORB_RELOAD );
+//	TIM_OnReload( 	TIM_MOTORB, MOTOR_ReloadM2_ISR );
+//	TIM_OnPulse( 	TIM_MOTORB, TIM_MOTORB_CH, MOTOR_PulseM2_ISR );
+//	TIM_SetPulse(	TIM_MOTORB, TIM_MOTORB_CH, M2.speed );
+//	TIM_Start(		TIM_MOTORB );
 }
 
 

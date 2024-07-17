@@ -1,3 +1,6 @@
 [submodule "FW/KAKAPO-20A/Modules"]
 	path = FW/KAKAPO-20A/Modules
 	url = https://github.com/Lambosaurus/Modules.git
+[submodule "FW/KAKAPO-20A/STM32X"]
+	path = FW/KAKAPO-20A/STM32X
+	url = https://github.com/Lambosaurus/STM32X.git

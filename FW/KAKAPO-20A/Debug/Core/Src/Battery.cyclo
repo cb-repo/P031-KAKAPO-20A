@@ -1,0 +1,8 @@
+../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	1
+../STM32X/Lib/GPIO.inl.h:16:20:GPIO_Deinit	1
+../Core/Src/Battery.c:76:6:BATT_Init	9
+../Core/Src/Battery.c:114:6:BATT_Deinit	1
+../Core/Src/Battery.c:126:6:BATT_Update	11
+../Core/Src/Battery.c:200:6:BATT_inFaultState	1
+../Core/Src/Battery.c:214:17:BATT_calcStartup	2
+../Core/Src/Battery.c:235:17:BATT_calc	2

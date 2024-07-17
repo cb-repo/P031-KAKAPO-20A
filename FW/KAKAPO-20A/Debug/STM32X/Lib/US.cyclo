@@ -1,0 +1,2 @@
+../STM32X/Lib/CLK.inl.h:10:24:CLK_GetHCLKFreq	1
+../STM32X/Lib/US.c:59:39:US_Delay	2

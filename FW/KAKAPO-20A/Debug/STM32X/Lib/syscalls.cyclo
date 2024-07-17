@@ -1,0 +1,4 @@
+../STM32X/Lib/syscalls.c:2:6:_close	1
+../STM32X/Lib/syscalls.c:6:6:_lseek	1
+../STM32X/Lib/syscalls.c:10:6:_read	1
+../STM32X/Lib/syscalls.c:14:6:_write	1

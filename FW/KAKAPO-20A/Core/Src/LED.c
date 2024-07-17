@@ -64,7 +64,10 @@ void LED_Init (void)
  */
 void LED_Deinit (void)
 {
+	#if defined(LED_PWR_Pin)
 	GPIO_Deinit(LED_PWR_Pin);
+	#endif
+
 	GPIO_Deinit(LED_M1_Pin);
 	GPIO_Deinit(LED_M2_Pin);
 }

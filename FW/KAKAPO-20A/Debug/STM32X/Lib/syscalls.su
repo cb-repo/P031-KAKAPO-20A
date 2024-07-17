@@ -1,0 +1,4 @@
+../STM32X/Lib/syscalls.c:2:6:_close	8	static
+../STM32X/Lib/syscalls.c:6:6:_lseek	8	static
+../STM32X/Lib/syscalls.c:10:6:_read	8	static
+../STM32X/Lib/syscalls.c:14:6:_write	8	static

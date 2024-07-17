@@ -1,0 +1,2 @@
+../STM32X/Lib/WDG.c:33:6:WDG_Init	3
+../STM32X/Lib/WDG.c:57:6:WDG_Kick	1
