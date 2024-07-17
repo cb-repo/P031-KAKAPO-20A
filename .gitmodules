@@ -1,0 +1,3 @@
+[submodule "FW/KAKAPO-20A/Modules"]
+	path = FW/KAKAPO-20A/Modules
+	url = https://github.com/Lambosaurus/Modules.git
