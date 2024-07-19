@@ -6,7 +6,6 @@
 
 
 #include "STM32X.h"
-
 #include "GPIO.h"
 #include "Core.h"
 #include "Motor.h"

@@ -6,7 +6,6 @@
 
 
 #include "STM32X.h"
-
 #include "CORE.h"
 #include "GPIO.h"
 #include "ADC.h"

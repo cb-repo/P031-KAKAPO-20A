@@ -6,7 +6,8 @@
 ../STM32X/Lib/ADC.c:309:10:AIN_AinToMv	1
 ../STM32X/Lib/ADC.c:314:9:ADC_ReadDieTemp	1
 ../STM32X/Lib/ADC.c:330:10:ADC_ReadVRef	1
-../STM32X/Lib/ADC.c:379:13:ADC_StopConversion	3
-../STM32X/Lib/ADC.c:391:13:ADC_WaitForFlag	2
-../STM32X/Lib/ADC.c:396:13:ADC_Calibrate	2
-../STM32X/Lib/ADC.c:403:17:ADC_SelectSampleTime	3
+../STM32X/Lib/ADC.c:340:6:ADC_ReadTempNoise	3
+../STM32X/Lib/ADC.c:396:13:ADC_StopConversion	3
+../STM32X/Lib/ADC.c:408:13:ADC_WaitForFlag	2
+../STM32X/Lib/ADC.c:413:13:ADC_Calibrate	2
+../STM32X/Lib/ADC.c:420:17:ADC_SelectSampleTime	3

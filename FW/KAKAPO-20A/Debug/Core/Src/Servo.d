@@ -1,4 +1,4 @@
-Core/Src/LED.o: ../Core/Src/LED.c ../Core/Inc/LED.h \
+Core/Src/Servo.o: ../Core/Src/Servo.c ../Core/Inc/Servo.h \
  ../STM32X/Lib/STM32X.h ../Core/Inc/Board.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h \
@@ -46,13 +46,14 @@ Core/Src/LED.o: ../Core/Src/LED.c ../Core/Inc/LED.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_usart.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_usart_ex.h \
  ../STM32X/Lib/GPIO.h ../STM32X/Lib/STM32X.h ../STM32X/Lib/GPIO.inl.h \
- ../STM32X/Lib/Core.h ../STM32X/Lib/Core.inl.h ../Core/Inc/Motor.h \
  ../STM32X/Lib/TIM.h ../STM32X/Lib/GPIO.h ../STM32X/Lib/TIM.inl.h \
- ../STM32X/Lib/SPI.h ../Core/Inc/main.h ../STM32X/Lib/ADC.h \
- ../STM32X/Lib/UART.h ../STM32X/Lib/US.h ../Modules/Utils/FPROM/FPROM.h \
- ../Core/Inc/Battery.h ../STM32X/Lib/CORE.h ../Core/Inc/Temperature.h \
- ../Core/Inc/Radio.h ../Core/Inc/Servo.h ../Core/Inc/LED.h
-../Core/Inc/LED.h:
+ ../Core/Inc/main.h ../STM32X/Lib/Core.h ../STM32X/Lib/Core.inl.h \
+ ../STM32X/Lib/ADC.h ../STM32X/Lib/UART.h ../STM32X/Lib/US.h \
+ ../Modules/Utils/FPROM/FPROM.h ../Core/Inc/Battery.h \
+ ../STM32X/Lib/CORE.h ../Core/Inc/Temperature.h ../Core/Inc/Radio.h \
+ ../Core/Inc/Motor.h ../STM32X/Lib/SPI.h ../Core/Inc/Servo.h \
+ ../Core/Inc/LED.h
+../Core/Inc/Servo.h:
 ../STM32X/Lib/STM32X.h:
 ../Core/Inc/Board.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h:
@@ -103,14 +104,12 @@ Core/Src/LED.o: ../Core/Src/LED.c ../Core/Inc/LED.h \
 ../STM32X/Lib/GPIO.h:
 ../STM32X/Lib/STM32X.h:
 ../STM32X/Lib/GPIO.inl.h:
-../STM32X/Lib/Core.h:
-../STM32X/Lib/Core.inl.h:
-../Core/Inc/Motor.h:
 ../STM32X/Lib/TIM.h:
 ../STM32X/Lib/GPIO.h:
 ../STM32X/Lib/TIM.inl.h:
-../STM32X/Lib/SPI.h:
 ../Core/Inc/main.h:
+../STM32X/Lib/Core.h:
+../STM32X/Lib/Core.inl.h:
 ../STM32X/Lib/ADC.h:
 ../STM32X/Lib/UART.h:
 ../STM32X/Lib/US.h:
@@ -119,5 +118,7 @@ Core/Src/LED.o: ../Core/Src/LED.c ../Core/Inc/LED.h \
 ../STM32X/Lib/CORE.h:
 ../Core/Inc/Temperature.h:
 ../Core/Inc/Radio.h:
+../Core/Inc/Motor.h:
+../STM32X/Lib/SPI.h:
 ../Core/Inc/Servo.h:
 ../Core/Inc/LED.h:

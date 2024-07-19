@@ -2,6 +2,7 @@
 "./Core/Src/LED.o"
 "./Core/Src/Motor.o"
 "./Core/Src/Radio.o"
+"./Core/Src/Servo.o"
 "./Core/Src/Temperature.o"
 "./Core/Src/main.o"
 "./Core/Src/system_stm32c0xx.o"

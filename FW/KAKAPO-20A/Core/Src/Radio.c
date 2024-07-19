@@ -1,3 +1,4 @@
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #include "Radio.h"
@@ -48,6 +49,7 @@ typedef enum {
 /* PRIVATE PROTOTYPES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
 bool 		RADIO_inFaultStateCH1 	( void );
 bool 		RADIO_inFaultStateCH2 	( void );
 #if RADIO_NUM_CHANNELS >= 3
@@ -69,6 +71,7 @@ static void RADIO_CH4_IRQ			( void );
 #endif
 #endif
 
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PRIVATE VARIABLES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -85,7 +88,11 @@ RADIO_Data 					data;
 
 
 /*
- * Handles initialization of radio module, including data structures, timers, and calibration
+ * HANDLES INITIALISATION OF RADIO MODULE
+ * INCLUDES DATA STRUCTURES, TIMERS, AND CALIBRATION
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void RADIO_Init(void) {
 	// RESET RADIO DATA ARRAYS
@@ -125,6 +132,9 @@ void RADIO_Init(void) {
 /*
  * UPDATES RELEVANT RADIO DATA
  * SHOULD BE POLLED REGULARLY, RECOMMENDED PERIOD = ~1MS
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void RADIO_Update(void) {
 	// INIT LOOP VARIABLES
@@ -186,7 +196,10 @@ void RADIO_Update(void) {
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 RADIO_Data* RADIO_getDataPtr ( void )
 {
@@ -195,7 +208,10 @@ RADIO_Data* RADIO_getDataPtr ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool RADIO_inFaultStateFULL ( void )
 {
@@ -214,7 +230,10 @@ bool RADIO_inFaultStateFULL ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool RADIO_inFaultStateANY ( void )
 {
@@ -238,7 +257,10 @@ bool RADIO_inFaultStateANY ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool RADIO_inFaultStateCH1 ( void )
 {
@@ -250,9 +272,11 @@ bool RADIO_inFaultStateCH1 ( void )
 }
 
 
-
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool RADIO_inFaultStateCH2 ( void )
 {
@@ -263,8 +287,12 @@ bool RADIO_inFaultStateCH2 ( void )
 	}
 }
 
+
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 #if RADIO_NUM_CHANNELS >= 3
 bool RADIO_inFaultStateCH3 ( void )
@@ -277,8 +305,12 @@ bool RADIO_inFaultStateCH3 ( void )
 }
 #endif
 
+
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 #if RADIO_NUM_CHANNELS >= 4
 bool RADIO_inFaultStateCH4 ( void )
@@ -293,7 +325,10 @@ bool RADIO_inFaultStateCH4 ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 uint32_t RADIO_truncate(uint32_t r) {
 	if (r == 0) {
@@ -317,7 +352,10 @@ uint32_t RADIO_truncate(uint32_t r) {
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void RADIO_processChannel(uint8_t ch) {
 	// MOVE DATA FROM TEMP TO DATA ARRAY
@@ -342,6 +380,12 @@ void RADIO_processChannel(uint8_t ch) {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+/*
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
+ */
 static void RADIO_CH1_IRQ ( void )
 {
 	// INITIALISE LOOP VARIABLES
@@ -382,6 +426,12 @@ static void RADIO_CH1_IRQ ( void )
 }
 
 
+/*
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
+ */
 static void RADIO_CH2_IRQ ( void )
 {
 	bool pos = GPIO_Read(RADIO_PWM2_Pin);
@@ -410,6 +460,13 @@ static void RADIO_CH2_IRQ ( void )
 	pos_p = pos;
 }
 
+
+/*
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
+ */
 #if RADIO_NUM_CHANNELS >= 3
 static void RADIO_CH3_IRQ ( void )
 {
@@ -440,6 +497,13 @@ static void RADIO_CH3_IRQ ( void )
 }
 #endif
 
+
+/*
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
+ */
 #if RADIO_NUM_CHANNELS >= 4
 static void RADIO_CH4_IRQ ( void )
 {

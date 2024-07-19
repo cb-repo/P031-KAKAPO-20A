@@ -70,8 +70,13 @@ static uint32_t battSum = 0;
 
 
 /*
- * Initialize battery module, including associated GPIO and measuring/setting fault thresholds
- * ADC_Init() MUST be called prior to BATTERY_Init()
+ * INITIALISE BATTERY MODULE
+ * INCLUDING ASSOCIATED GPIO AND MEASURING/SETTING FAULT THRESHOLDS
+ *
+ * ADC_Init() MUST BE CALLED PRIOR TO BATTERY_Init()
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void BATT_Init ( void )
 {
@@ -109,7 +114,10 @@ void BATT_Init ( void )
 
 
 /*
- * De-initialsie battery module
+ * DEINITIALISE BATTERY MODULE
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void BATT_Deinit ( void )
 {
@@ -121,7 +129,10 @@ void BATT_Deinit ( void )
 
 
 /*
- * Handle battery voltage readings and fault state checks
+ * HANDLE BATTERY VOLTAGE READINGS AND FAULT STATE CHECKS
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void BATT_Update ( void )
 {
@@ -196,6 +207,9 @@ void BATT_Update ( void )
 
 /*
  * CALLED TO GET CURRENT FAULT STATE OF MODULE
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool BATT_inFaultState ( void )
 {
@@ -209,7 +223,10 @@ bool BATT_inFaultState ( void )
 
 
 /*
- * Handle startup condition to prime bettery data array prior to normal operation
+ * HANDLE STARTUP CONDITION TO PRIME BATTERY DATA ARRAY PRIOR TO NORMAL OPERATION
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 static uint32_t BATT_calcStartup ( void )
 {
@@ -228,9 +245,11 @@ static uint32_t BATT_calcStartup ( void )
 }
 
 
-
 /*
- * Handle normal operation for the battery voltage measurement and running average filter
+ * HANDLE NORMAL OPERATION FOR BATTERY VOLTAGE MEASUREMENT AND RUNNING AVERAGE FILTER
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 static uint32_t BATT_calc ( void )
 {

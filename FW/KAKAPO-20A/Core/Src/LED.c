@@ -39,14 +39,16 @@ void LED_toggleOutput_M2 	( void );
 /* PRIVATE VARIABLES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PUBLIC FUNCTIONS										*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 /*
- * Handles Initialization of the LED Module
+ * HANDLES INITIALISATION OF LED MODULE
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_Init (void)
 {
@@ -60,7 +62,10 @@ void LED_Init (void)
 
 
 /*
- * Handles De-Initialization of LED Module
+ * HANDLES DEINITIALISATION OF LED MODULE
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_Deinit (void)
 {
@@ -74,7 +79,10 @@ void LED_Deinit (void)
 
 
 /*
- * Handle...
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_Update ( void )
 {
@@ -149,11 +157,10 @@ void LED_Update ( void )
 
 
 /*
- *  Turn Both LED's ON then OFF (Pulse) A Defined Number of Time
+ * TURN BOTH LEDs ON THEN OFF (PULSE) A DEFINED NU8MBER OF TIMES
  *
- *  n = Number of Pulses
- *  LED_PULSEOFF_MS = Time LED Pulses OFF
- *  LED_PULSEON_MS = Time LED Pulse ON
+ * INPUTS: n = NUMBER OF PULSES
+ * OUTPUTS:
  */
 void LED_pulseOutputs ( uint8_t n )
 {
@@ -175,7 +182,10 @@ void LED_pulseOutputs ( uint8_t n )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_calibUpdate ( bool M1, bool M2 )
 {
@@ -190,7 +200,10 @@ void LED_calibUpdate ( bool M1, bool M2 )
 
 
 /*
- * Retrieve the Current State of the M1 LED
+ * RETRIEVE THE CURRENT STATE OF THE M1 LED
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool LED_getState_M1 ( void )
 {
@@ -199,7 +212,10 @@ bool LED_getState_M1 ( void )
 
 
 /*
- * Retrieve the Current State of the M2 LED
+ * RETRIEVE THE CURRENT STATE OF M2 LED
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool LED_getState_M2 ( void )
 {
@@ -208,7 +224,10 @@ bool LED_getState_M2 ( void )
 
 
 /*
- * Turn the M1 LED ON/OFF
+ * TURN THE M1 LED ON/OFF
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_updateOutput_M1 ( bool on )
 {
@@ -221,7 +240,10 @@ void LED_updateOutput_M1 ( bool on )
 
 
 /*
- * Turn the M2 LED ON/OFF
+ * TURN THE M2 LED ON/OFF
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_updateOutput_M2 ( bool on )
 {
@@ -234,9 +256,10 @@ void LED_updateOutput_M2 ( bool on )
 
 
 /*
- * Toggle the State of M1 LED
+ * TOGGLE THE STATE OF M1 LED
  *
- * Calling the Function Will Turn M1 OFF if it was already on and vice-versa.
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_toggleOutput_M1 ( void )
 {
@@ -249,9 +272,10 @@ void LED_toggleOutput_M1 ( void )
 
 
 /*
- * Toggle the State of M2 LED
+ * TOGGLE THE STATE OF THE M2 LED
  *
- * Calling the Function Will Turn M2 OFF if it was already on and vice-versa.
+ * INPUTS:
+ * OUTPUTS:
  */
 void LED_toggleOutput_M2 ( void )
 {

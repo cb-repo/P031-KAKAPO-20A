@@ -9,7 +9,8 @@
 ../STM32X/Lib/Core.c:163:6:CORE_Reset	8	static
 ../STM32X/Lib/Core.c:169:6:CORE_OnTick	16	static
 ../STM32X/Lib/Core.c:175:20:CORE_GetResetSource	16	static
-../STM32X/Lib/Core.c:229:6:CORE_InitSysTick	8	static
-../STM32X/Lib/Core.c:235:6:CORE_InitGPIO	24	static
-../STM32X/Lib/Core.c:261:10:HAL_GetTick	8	static
-../STM32X/Lib/Core.c:270:6:SysTick_Handler	8	static
+../STM32X/Lib/Core.c:225:18:CORE_GetUID	8	static
+../STM32X/Lib/Core.c:234:6:CORE_InitSysTick	8	static
+../STM32X/Lib/Core.c:240:6:CORE_InitGPIO	24	static
+../STM32X/Lib/Core.c:266:10:HAL_GetTick	8	static
+../STM32X/Lib/Core.c:275:6:SysTick_Handler	8	static

@@ -10,17 +10,17 @@
 
 #define PULSE_WIDTH_CENTER_DEADBAND	50	// Deadzone around Center
 #define PULSE_WIDTH_CENTER_US		MOTOR_CENTER
-#define PULSE_WIDTH_HCENTER_US		(PULSE_WIDTH_CENTER_US + PULSE_WIDTH_CENTER_DEADBAND)
-#define PULSE_WIDTH_LCENTER_US		(PULSE_WIDTH_CENTER_US - PULSE_WIDTH_CENTER_DEADBAND)
+#define PULSE_WIDTH_HCENTER_US		( PULSE_WIDTH_CENTER_US + PULSE_WIDTH_CENTER_DEADBAND )
+#define PULSE_WIDTH_LCENTER_US		( PULSE_WIDTH_CENTER_US - PULSE_WIDTH_CENTER_DEADBAND )
 
 #define PULSE_WIDTH_FULLON			25
 #define PULSE_WIDTH_ERROR_US		RADIO_CH_ERROR
 #define PULSE_WIDTH_MIN_US			MOTOR_MIN
-#define PULSE_WIDTH_MMIN_US			(PULSE_WIDTH_MIN_US + PULSE_WIDTH_FULLON)
-#define PULSE_WIDTH_ABSMIN_US		(PULSE_WIDTH_MIN_US - PULSE_WIDTH_ERROR_US)
+#define PULSE_WIDTH_MMIN_US			( PULSE_WIDTH_MIN_US + PULSE_WIDTH_FULLON )
+#define PULSE_WIDTH_ABSMIN_US		( PULSE_WIDTH_MIN_US - PULSE_WIDTH_ERROR_US )
 #define PULSE_WIDTH_MAX_US			MOTOR_MAX
-#define PULSE_WIDTH_MMAX_US			(PULSE_WIDTH_MAX_US - PULSE_WIDTH_FULLON)
-#define PULSE_WIDTH_ABSMAX_US		(PULSE_WIDTH_MAX_US + PULSE_WIDTH_ERROR_US)
+#define PULSE_WIDTH_MMAX_US			( PULSE_WIDTH_MAX_US - PULSE_WIDTH_FULLON )
+#define PULSE_WIDTH_ABSMAX_US		( PULSE_WIDTH_MAX_US + PULSE_WIDTH_ERROR_US )
 
 #define SPEED_OFF					0
 #define SPEED_MAX					MOTOR_HALFSCALE
@@ -62,27 +62,27 @@ void 			MOTOR_PulseM2_ISR 	( void );
 /* PRIVATE VARIABLES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-static volatile uint8_t tx[TX_BUFF_SIZE] 	= {0};
-static uint8_t tx_resetFault[TX_BUFF_SIZE] 	= {0x08, 0x92};
-static uint8_t tx_driveOFF[TX_BUFF_SIZE] 	= {0x09, 0x00};
-static uint8_t tx_driveFWD[TX_BUFF_SIZE] 	= {0x09, 0x03};
-static uint8_t tx_driveRVS[TX_BUFF_SIZE] 	= {0x09, 0x02};
 
-CONFIG_data config = {0};
+static volatile uint8_t	tx[TX_BUFF_SIZE] 			= {0};
+static uint8_t 			tx_resetFault[TX_BUFF_SIZE]	= {0x08, 0x92};
+static uint8_t 			tx_driveOFF[TX_BUFF_SIZE] 	= {0x09, 0x00};
+static uint8_t 			tx_driveFWD[TX_BUFF_SIZE] 	= {0x09, 0x03};
+static uint8_t 			tx_driveRVS[TX_BUFF_SIZE] 	= {0x09, 0x02};
 
-RADIO_Data* dataPtr = 0;
+static CONFIG_data 		config 						= {0};
+static RADIO_Data* 		dataPtr 					= 0;
 
-static MOTOR_chStats M1 = {
-		.speed = 0,
-		.speed_p = 0,
-		.dir = false,
-		.dir_p = false, };
+static MOTOR_chStats 	M1 = {
+						.speed = 0,
+						.speed_p = 0,
+						.dir = false,
+						.dir_p = false, };
 
-static MOTOR_chStats M2 = {
-		.speed = 0,
-		.speed_p = 0,
-		.dir = false,
-		.dir_p = false, };
+static MOTOR_chStats 	M2 = {
+						.speed = 0,
+						.speed_p = 0,
+						.dir = false,
+						.dir_p = false, };
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -91,7 +91,10 @@ static MOTOR_chStats M2 = {
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_Init ( void )
 {
@@ -111,7 +114,7 @@ void MOTOR_Init ( void )
 	GPIO_Init( 			MOTORB_Sense, 	GPIO_Mode_Analog );
 	GPIO_EnableInput(	MOTORB_Fault, 	GPIO_Pull_Up );
 
-	// RETRIEVE DRIVE CONFIG FROM FLASH
+	// RETRIEVE CONFIG FROM FLASH
 	FPROM_Read( CONFIG_FPROM_OFFSET, &config, sizeof(config) );
 
 	// RETRIEVE POINTER TO RADIO DATA
@@ -209,31 +212,37 @@ void MOTOR_Init ( void )
 	SPI_Write( SPI_1, tx, TX_BUFF_SIZE );
 	GPIO_Set( MOTORB_Select );
 
-//	// START TIMER TO ...
-//	TIM_Init( 		TIM_MOTORA, TIM_MOTORA_FREQ, TIM_MOTORA_RELOAD );
-//	TIM_OnReload( 	TIM_MOTORA, MOTOR_ReloadM1_ISR );
-//	TIM_OnPulse( 	TIM_MOTORA, TIM_MOTORA_CH, MOTOR_PulseM1_ISR );
-//	TIM_SetPulse(	TIM_MOTORA, TIM_MOTORA_CH, M1.speed );
-//	TIM_Start(		TIM_MOTORA );
-//	TIM_Init( 		TIM_MOTORB, TIM_MOTORB_FREQ, TIM_MOTORB_RELOAD );
-//	TIM_OnReload( 	TIM_MOTORB, MOTOR_ReloadM2_ISR );
-//	TIM_OnPulse( 	TIM_MOTORB, TIM_MOTORB_CH, MOTOR_PulseM2_ISR );
-//	TIM_SetPulse(	TIM_MOTORB, TIM_MOTORB_CH, M2.speed );
-//	TIM_Start(		TIM_MOTORB );
+	// START TIMER TO ...
+	TIM_Init( 		TIM_MOTORA, TIM_MOTORA_FREQ, TIM_MOTORA_RELOAD );
+	TIM_OnReload( 	TIM_MOTORA, MOTOR_ReloadM1_ISR );
+	TIM_OnPulse( 	TIM_MOTORA, TIM_MOTORA_CH, MOTOR_PulseM1_ISR );
+	TIM_SetPulse(	TIM_MOTORA, TIM_MOTORA_CH, M1.speed );
+	TIM_Start(		TIM_MOTORA );
+	TIM_Init( 		TIM_MOTORB, TIM_MOTORB_FREQ, TIM_MOTORB_RELOAD );
+	TIM_OnReload( 	TIM_MOTORB, MOTOR_ReloadM2_ISR );
+	TIM_OnPulse( 	TIM_MOTORB, TIM_MOTORB_CH, MOTOR_PulseM2_ISR );
+	TIM_SetPulse(	TIM_MOTORB, TIM_MOTORB_CH, M2.speed );
+	TIM_Start(		TIM_MOTORB );
 }
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
-//void MOTOR_Deinit ( void )
-//{
-//
-//}
+void MOTOR_Deinit ( void )
+{
+
+}
 
 
 /*
- * UPDATE THE MOTOR SPEED
+ * TEXT
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_Update ( void )
 {
@@ -309,17 +318,22 @@ void MOTOR_Update ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_getConfig ( void )
 {
-	// RETRIEVE DRIVE CONFIG FROM FLASH
 	FPROM_Read( CONFIG_FPROM_OFFSET, &config, sizeof(config) );
 }
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool MOTOR_M1_isActive ( void )
 {
@@ -327,9 +341,12 @@ bool MOTOR_M1_isActive ( void )
 }
 
 
-/*
- *
- */
+ /*
+  * TEXT
+  *
+  * INPUTS:
+  * OUTPUTS:
+  */
 bool MOTOR_M2_isActive ( void )
 {
 	return M2.speed;
@@ -337,7 +354,10 @@ bool MOTOR_M2_isActive ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_StartupBuzz ( void )
 {
@@ -346,7 +366,10 @@ void MOTOR_StartupBuzz ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_calibASSERT ( void )
 {
@@ -355,7 +378,10 @@ void MOTOR_calibASSERT ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_calibRELEASE( void )
 {
@@ -364,7 +390,10 @@ void MOTOR_calibRELEASE( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_calibOFF ( void )
 {
@@ -377,7 +406,10 @@ void MOTOR_calibOFF ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_calibTwitchFWD ( uint32_t delay )
 {
@@ -401,7 +433,10 @@ void MOTOR_calibTwitchFWD ( uint32_t delay )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_calibTwitchLEFT ( uint32_t delay )
 {
@@ -430,7 +465,10 @@ void MOTOR_calibTwitchLEFT ( uint32_t delay )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 static uint32_t MOTOR_ReverseRadio ( uint32_t radio )
 {
@@ -439,7 +477,10 @@ static uint32_t MOTOR_ReverseRadio ( uint32_t radio )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 static uint32_t MOTOR_Truncate ( uint32_t input )
 {
@@ -460,9 +501,12 @@ static uint32_t MOTOR_Truncate ( uint32_t input )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
-static void MOTOR_Process ( uint32_t input, MOTOR_chStats* m ) // uint32_t* speed, uint32_t* speed_p, bool* direction, bool*direction_p )
+static void MOTOR_Process ( uint32_t input, MOTOR_chStats* m )
 {
 	uint32_t radio = 0;
 	uint32_t speedInt = 0;
@@ -555,7 +599,10 @@ static void MOTOR_Process ( uint32_t input, MOTOR_chStats* m ) // uint32_t* spee
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_ReloadM1_ISR ( void )
 {
@@ -586,7 +633,10 @@ void MOTOR_ReloadM1_ISR ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_PulseM1_ISR ( void )
 {
@@ -617,63 +667,49 @@ void MOTOR_PulseM1_ISR ( void )
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_ReloadM2_ISR ( void )
 {
-	//
 	GPIO_Reset( MOTORB_Select );
-	//
-	if ( !GPIO_Read( MOTORB_Fault ) )
-	{
+	if ( !GPIO_Read( MOTORB_Fault ) ) {
 		SPI_Write( SPI_1, (uint8_t*)tx_resetFault, TX_BUFF_SIZE );
-	}
-	//
-	else if ( M2.speed == SPEED_OFF )
-	{
+	} else if ( M2.speed == SPEED_OFF ) {
 		SPI_Write( SPI_1, (uint8_t*)tx_driveOFF, TX_BUFF_SIZE );
-	}
-	//
-	else // M2.speed != SPEED_OFF
-	{
+	} else {
 		if ( M2.dir ) {
 			SPI_Write( SPI_1, (uint8_t*)tx_driveFWD, TX_BUFF_SIZE );
 		} else {
 			SPI_Write( SPI_1, (uint8_t*)tx_driveRVS, TX_BUFF_SIZE );
 		}
 	}
-	//
 	GPIO_Set( MOTORB_Select );
 }
 
 
 /*
+ * TEXT
  *
+ * INPUTS:
+ * OUTPUTS:
  */
 void MOTOR_PulseM2_ISR ( void )
 {
-	//
 	GPIO_Reset( MOTORB_Select );
-	//
-	if ( !GPIO_Read( MOTORB_Fault ) )
-	{
+	if ( !GPIO_Read( MOTORB_Fault ) ) {
 		SPI_Write( SPI_1, (uint8_t*)tx_resetFault, TX_BUFF_SIZE );
-	}
-	//
-	else if ( M2.speed != SPEED_MAX )
-	{
+	} else if ( M2.speed != SPEED_MAX ) {
 		SPI_Write( SPI_1, (uint8_t*)tx_driveOFF, TX_BUFF_SIZE );
-	}
-	//
-	else // M2.speed == SPEED_MAX
-	{
+	} else {
 		if ( M2.dir ) {
 			SPI_Write( SPI_1, (uint8_t*)tx_driveFWD, TX_BUFF_SIZE );
 		} else {
 			SPI_Write( SPI_1, (uint8_t*)tx_driveRVS, TX_BUFF_SIZE );
 		}
 	}
-	//
 	GPIO_Set( MOTORB_Select );
 }
 

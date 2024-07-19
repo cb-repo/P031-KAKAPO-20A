@@ -1,8 +1,8 @@
 ../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	8	static
 ../STM32X/Lib/GPIO.inl.h:16:20:GPIO_Deinit	16	static
-../Core/Src/Battery.c:76:6:BATT_Init	16	static
-../Core/Src/Battery.c:114:6:BATT_Deinit	8	static
-../Core/Src/Battery.c:126:6:BATT_Update	16	static
-../Core/Src/Battery.c:200:6:BATT_inFaultState	8	static
-../Core/Src/Battery.c:214:17:BATT_calcStartup	24	static
-../Core/Src/Battery.c:235:17:BATT_calc	16	static
+../Core/Src/Battery.c:81:6:BATT_Init	16	static
+../Core/Src/Battery.c:122:6:BATT_Deinit	8	static
+../Core/Src/Battery.c:137:6:BATT_Update	16	static
+../Core/Src/Battery.c:214:6:BATT_inFaultState	8	static
+../Core/Src/Battery.c:231:17:BATT_calcStartup	24	static
+../Core/Src/Battery.c:254:17:BATT_calc	16	static

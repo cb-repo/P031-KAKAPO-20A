@@ -1,0 +1,11 @@
+../STM32X/Lib/GPIO.inl.h:21:20:GPIO_EnableOutput	16	static
+../Core/Src/Servo.c:67:6:SERVO_Init	8	static
+../Core/Src/Servo.c:101:6:SERVO_Deinit	8	static
+../Core/Src/Servo.c:123:6:SERVO_Update	24	static
+../Core/Src/Servo.c:171:6:SERVO_getConfig	8	static
+../Core/Src/Servo.c:188:17:SERVO_ReverseRadio	16	static
+../Core/Src/Servo.c:200:17:SERVO_Truncate	16	static
+../Core/Src/Servo.c:233:13:SERVO_S1_TimerReloadISR	8	static
+../Core/Src/Servo.c:245:13:SERVO_S1_TimerPulseISR	8	static
+../Core/Src/Servo.c:258:13:SERVO_S2_TimerReloadISR	8	static
+../Core/Src/Servo.c:272:13:SERVO_S2_TimerPulseISR	8	static

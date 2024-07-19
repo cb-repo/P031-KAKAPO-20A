@@ -47,11 +47,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_usart_ex.h \
  ../STM32X/Lib/Core.h ../STM32X/Lib/STM32X.h ../STM32X/Lib/Core.inl.h \
  ../STM32X/Lib/GPIO.h ../STM32X/Lib/GPIO.inl.h ../STM32X/Lib/ADC.h \
- ../STM32X/Lib/UART.h ../STM32X/Lib/US.h ../Core/Inc/Battery.h \
- ../STM32X/Lib/CORE.h ../Core/Inc/Temperature.h ../Core/Inc/Radio.h \
- ../STM32X/Lib/TIM.h ../STM32X/Lib/GPIO.h ../STM32X/Lib/TIM.inl.h \
- ../Core/Inc/Motor.h ../STM32X/Lib/SPI.h ../Core/Inc/main.h \
- ../Core/Inc/LED.h ../Modules/Utils/FPROM/FPROM.h
+ ../STM32X/Lib/UART.h ../STM32X/Lib/US.h ../Modules/Utils/FPROM/FPROM.h \
+ ../Core/Inc/Battery.h ../STM32X/Lib/CORE.h ../Core/Inc/Temperature.h \
+ ../Core/Inc/Radio.h ../STM32X/Lib/TIM.h ../STM32X/Lib/GPIO.h \
+ ../STM32X/Lib/TIM.inl.h ../Core/Inc/Motor.h ../STM32X/Lib/SPI.h \
+ ../Core/Inc/main.h ../Core/Inc/Servo.h ../Core/Inc/LED.h
 ../Core/Inc/main.h:
 ../STM32X/Lib/STM32X.h:
 ../Core/Inc/Board.h:
@@ -108,6 +108,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../STM32X/Lib/ADC.h:
 ../STM32X/Lib/UART.h:
 ../STM32X/Lib/US.h:
+../Modules/Utils/FPROM/FPROM.h:
 ../Core/Inc/Battery.h:
 ../STM32X/Lib/CORE.h:
 ../Core/Inc/Temperature.h:
@@ -118,5 +119,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/Motor.h:
 ../STM32X/Lib/SPI.h:
 ../Core/Inc/main.h:
+../Core/Inc/Servo.h:
 ../Core/Inc/LED.h:
-../Modules/Utils/FPROM/FPROM.h:

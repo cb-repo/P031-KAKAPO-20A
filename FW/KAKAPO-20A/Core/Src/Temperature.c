@@ -49,8 +49,13 @@ static uint32_t tempSum = 0;
 
 
 /*
- * Initialize temperature module
- * ADC_Init() MUST be called prior to TEMP_Init()
+ * INITIALISE TEMPERATURE MODULES
+ * INCLUDES...
+ *
+ * ADC_Init() MUST BE CALLED PRIOR TO TEMP_Init()
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void TEMP_Init ( void )
 {
@@ -67,7 +72,10 @@ void TEMP_Init ( void )
 
 
 /*
- * De-initialize temperature module
+ * DEINITIALISE TEMPERATURE MODULE
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void TEMP_Deinit ( void )
 {
@@ -77,7 +85,10 @@ void TEMP_Deinit ( void )
 
 
 /*
- * Handle temperature measurements and fault state readings/logic
+ * HANDLE TEMPERATURE MEASUREMENTS AND FAULT STATE READINGS/LOGIC
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 void TEMP_Update ( void )
 {
@@ -151,7 +162,10 @@ void TEMP_Update ( void )
 
 
 /*
- * Retrieves the current state of the temperature fault
+ * RETRIEVES THE CURRENT STATE OF THE TEMPERATURE FAULT
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 bool TEMP_inFaultState ( void )
 {
@@ -163,8 +177,12 @@ bool TEMP_inFaultState ( void )
 /* PRIVATE FUNCTIONS									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
 /*
- * Handle startup condition to prime temperature data array prior to normal operation
+ * HANDLE STARTUP CONDITION TO PRIME TEMPERATURE DATA ARRAY PRIOR TO NORMAL OPERATION
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 static void TEMP_calcStartup ( void )
 {
@@ -181,7 +199,10 @@ static void TEMP_calcStartup ( void )
 
 
 /*
- * Handle normal operation for the temperature measurement and running average filter
+ * HANDLE NORMAL OPERATION FOR THE TEMPERATURE MEASUREMENT AND RUNNING AVERAGE FILTER
+ *
+ * INPUTS:
+ * OUTPUTS:
  */
 static uint32_t TEMP_calc ( void )
 {

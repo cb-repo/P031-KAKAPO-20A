@@ -1,3 +1,4 @@
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #ifndef MAIN_H
 #define MAIN_H
@@ -5,19 +6,19 @@
 
 
 #include "STM32X.h"
-
 #include "Core.h"
 #include "GPIO.h"
 #include "ADC.h"
 #include "UART.h"
 #include "US.h"
+#include "FPROM.h"
 
 #include "Battery.h"
 #include "Temperature.h"
 #include "Radio.h"
 #include "Motor.h"
+#include "Servo.h"
 #include "LED.h"
-#include "FPROM.h"
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -30,6 +31,7 @@
 #define RSTBIT(var, bit)	(var &= (~(1 << (bit))))
 
 #define CONFIG_FPROM_OFFSET	0
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PUBLIC TYPES      									*/
@@ -74,6 +76,12 @@ typedef struct {
 	uint32_t 			motorB_ch;
 	bool 				motorB_rev;
 
+	uint32_t			servoS1_ch;
+	bool				servoS1_rev;
+
+	uint32_t			servoS2_ch;
+	bool				servoS2_rev;
+
 	uint32_t 			hashB;
 } CONFIG_data;
 
@@ -81,9 +89,6 @@ typedef struct {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PUBLIC FUNCTIONS										*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* EXTERN DECLARATIONS									*/

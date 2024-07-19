@@ -6,7 +6,6 @@
 
 
 #include "STM32X.h"
-
 #include "Core.h"
 #include "GPIO.h"
 #include "TIM.h"
@@ -27,12 +26,10 @@
 #define RADIO_CH_MIN			1000
 #define RADIO_CH_CENTER			1500
 #define RADIO_CH_MAX			2000
-//#define RADIO_CH_HYST			10
+#define RADIO_CH_ERROR			200 								// Out-of-range Error... Above + Below Min/Max
 
-#define RADIO_CH_HALFSCALE		(RADIO_CH_MAX - RADIO_CH_CENTER)
-#define RADIO_CH_FULLSCALE		(RADIO_CH_MAX - RADIO_CH_MIN)
-
-#define RADIO_CH_ERROR			200 // Out-of-range Error... Above + Below Min/Max
+#define RADIO_CH_HALFSCALE		( RADIO_CH_MAX - RADIO_CH_CENTER )
+#define RADIO_CH_FULLSCALE		( RADIO_CH_MAX - RADIO_CH_MIN )
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

@@ -1,3 +1,4 @@
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #ifndef MOTOR_H
 #define MOTOR_H
@@ -5,17 +6,15 @@
 
 
 #include "STM32X.h"
-
 #include "GPIO.h"
 #include "TIM.h"
-#include "Core.h"
 #include "SPI.h"
 
 #include "main.h"
-
 #include "Battery.h"
 #include "Temperature.h"
 #include "Radio.h"
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PUBLIC DEFINITIONS									*/
@@ -44,7 +43,7 @@
 
 
 void 	MOTOR_Init 				( void );
-//void 	MOTOR_Deinit			( void );
+void 	MOTOR_Deinit			( void );
 void 	MOTOR_Update			( void );
 
 void 	MOTOR_getConfig			( void );
