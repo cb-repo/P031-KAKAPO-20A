@@ -1,13 +1,1 @@
-../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	1
-../Core/Src/main.c:63:5:main	2
-../Core/Src/main.c:121:6:SYSTEM_Init	3
-../Core/Src/main.c:163:13:SYSTEM_Update	4
-../Core/Src/main.c:198:13:SYSTEM_initiateCalibration	10
-../Core/Src/main.c:241:13:SYSTEM_runCalibration	1
-../Core/Src/main.c:330:13:SYSTEM_calibrationMotor_Same	12
-../Core/Src/main.c:417:13:SYSTEM_calibrationMotor_Opposite	16
-../Core/Src/main.c:535:13:SYSTEM_calibrationServoS1	8
-../Core/Src/main.c:581:13:SYSTEM_calibrationServoS2	8
-../Core/Src/main.c:627:13:SYSTEM_wait_ActiveInput	2
-../Core/Src/main.c:650:13:SYSTEM_wait_ResetInputs	2
-../Core/Src/main.c:673:17:SYSTEM_count_ActiveInputs	4
+../Core/Src/main.c:63:5:main	129

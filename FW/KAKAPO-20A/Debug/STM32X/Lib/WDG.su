@@ -1,2 +1,2 @@
-../STM32X/Lib/WDG.c:33:6:WDG_Init	24	static
-../STM32X/Lib/WDG.c:57:6:WDG_Kick	8	static
+../STM32X/Lib/WDG.c:33:6:WDG_Init	8	static
+../STM32X/Lib/WDG.c:57:6:WDG_Kick	0	static

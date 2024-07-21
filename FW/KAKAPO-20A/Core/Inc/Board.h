@@ -47,7 +47,7 @@
 #define TIM_MOTORA_CH			0
 #define TIM_MOTOR_M2_CH			1
 #define TIM_MOTORA_RELOAD		500
-#define TIM_MOTORA_FREQ			750000
+#define TIM_MOTORA_FREQ			250000 //750000
 #define TIM3_ENABLE
 #define TIM_MOTORB				TIM_3
 #define TIM_MOTORB_CH			0

@@ -1,6 +1,4 @@
-../STM32X/Lib/FLASH.c:72:10:FLASH_GetPageCount	8	static
-../STM32X/Lib/FLASH.c:77:18:FLASH_GetPage	16	static
-../STM32X/Lib/FLASH.c:82:6:FLASH_Erase	24	static
-../STM32X/Lib/FLASH.c:104:6:FLASH_Write	40	static,ignoring_inline_asm
-../STM32X/Lib/FLASH.c:173:13:FLASH_Unlock	24	static,ignoring_inline_asm
-../STM32X/Lib/FLASH.c:195:20:FLASH_Lock	8	static
+../STM32X/Lib/FLASH.c:72:10:FLASH_GetPageCount	0	static
+../STM32X/Lib/FLASH.c:77:18:FLASH_GetPage	0	static
+../STM32X/Lib/FLASH.c:82:6:FLASH_Erase	0	static,ignoring_inline_asm
+../STM32X/Lib/FLASH.c:104:6:FLASH_Write	16	static,ignoring_inline_asm

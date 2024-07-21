@@ -5,5 +5,4 @@
 ../STM32X/Lib/CLK.c:295:6:CLK_DisableADCCLK	1
 ../STM32X/Lib/CLK.c:302:6:CLK_EnableRNGCLK	1
 ../STM32X/Lib/CLK.c:312:6:CLK_DisableRNGCLK	1
-../STM32X/Lib/CLK.c:319:10:CLK_SelectPrescalar	3
-../STM32X/Lib/CLK.c:354:13:CLK_AccessBackupDomain	1
+../STM32X/Lib/CLK.c:319:10:CLK_SelectPrescalar	4

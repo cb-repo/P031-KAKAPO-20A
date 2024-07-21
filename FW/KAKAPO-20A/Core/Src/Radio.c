@@ -389,11 +389,11 @@ void RADIO_processChannel(uint8_t ch) {
 static void RADIO_CH1_IRQ ( void )
 {
 	// INITIALISE LOOP VARIABLES
-	uint32_t 		now = TIM_Read(TIM_RADIO);
-	bool 			pos = GPIO_Read(RADIO_PWM1_Pin);
-	static bool 	pos_p = false;
-	static uint32_t	tickHigh = 0;
-	static uint32_t tickLow = 0;
+	uint32_t 		now 		= TIM_Read(TIM_RADIO);
+	bool 			pos 		= GPIO_Read(RADIO_PWM1_Pin);
+	static bool 	pos_p 		= false;
+	static uint32_t	tickHigh 	= 0;
+	static uint32_t tickLow 	= 0;
 
 
 	// IGNORE NOISE ON SIGNAL I/P THAT RETURNS FASTER THAN INTERRRUPT SERVICE
@@ -434,21 +434,19 @@ static void RADIO_CH1_IRQ ( void )
  */
 static void RADIO_CH2_IRQ ( void )
 {
-	bool pos = GPIO_Read(RADIO_PWM2_Pin);
-	uint32_t now = TIM_Read(TIM_RADIO);
-	uint32_t pulse = 0;
-	uint32_t period = 0;
-	static bool pos_p = false;
-	static uint32_t tickHigh = 0;
-	static uint32_t tickLow = 0;
+	uint32_t 		now 		= TIM_Read(TIM_RADIO);
+	bool 			pos 		= GPIO_Read(RADIO_PWM2_Pin);
+	static bool 	pos_p 		= false;
+	static uint32_t	tickHigh 	= 0;
+	static uint32_t tickLow 	= 0;
 
 	if ( pos_p != pos )
 	{
 		if ( pos ) {
 			tickHigh = now;
 		} else {
-			period = now - tickLow;
-			pulse = now - tickHigh;
+			uint32_t period = now - tickLow;
+			uint32_t pulse = now - tickHigh;
 			if ( pulse <= PWM_WIDTH_ABSMAX_US 	&& pulse >= PWM_WIDTH_ABSMIN_US &&
 				 period <= PWM_PERIOD_MAX_US	&& period >= PWM_PERIOD_MIN_US )
 			{
@@ -470,21 +468,19 @@ static void RADIO_CH2_IRQ ( void )
 #if RADIO_NUM_CHANNELS >= 3
 static void RADIO_CH3_IRQ ( void )
 {
-	bool pos = GPIO_Read(RADIO_PWM3_Pin);
-	uint32_t now = TIM_Read(TIM_RADIO);
-	uint32_t pulse = 0;
-	uint32_t period = 0;
-	static bool pos_p = false;
-	static uint32_t tickHigh = 0;
-	static uint32_t tickLow = 0;
+	uint32_t 		now 		= TIM_Read(TIM_RADIO);
+	bool 			pos 		= GPIO_Read(RADIO_PWM3_Pin);
+	static bool 	pos_p 		= false;
+	static uint32_t	tickHigh 	= 0;
+	static uint32_t tickLow 	= 0;
 
 	if ( pos_p != pos )
 	{
 		if ( pos ) {
 			tickHigh = now;
 		} else {
-			period = now - tickLow;
-			pulse = now - tickHigh;
+			uint32_t period = now - tickLow;
+			uint32_t pulse = now - tickHigh;
 			if ( pulse <= PWM_WIDTH_ABSMAX_US 	&& pulse >= PWM_WIDTH_ABSMIN_US &&
 				 period <= PWM_PERIOD_MAX_US	&& period >= PWM_PERIOD_MIN_US )
 			{
@@ -507,21 +503,19 @@ static void RADIO_CH3_IRQ ( void )
 #if RADIO_NUM_CHANNELS >= 4
 static void RADIO_CH4_IRQ ( void )
 {
-	bool pos = GPIO_Read(RADIO_PWM4_Pin);
-	uint32_t now = TIM_Read(TIM_RADIO);
-	uint32_t pulse = 0;
-	uint32_t period = 0;
-	static bool pos_p = false;
-	static uint32_t tickHigh = 0;
-	static uint32_t tickLow = 0;
+	uint32_t 		now 		= TIM_Read(TIM_RADIO);
+	bool 			pos 		= GPIO_Read(RADIO_PWM4_Pin);
+	static bool 	pos_p 		= false;
+	static uint32_t	tickHigh 	= 0;
+	static uint32_t tickLow 	= 0;
 
 	if ( pos_p != pos )
 	{
 		if ( pos ) {
 			tickHigh = now;
 		} else {
-			period = now - tickLow;
-			pulse = now - tickHigh;
+			uint32_t period = now - tickLow;
+			uint32_t pulse = now - tickHigh;
 			if ( pulse <= PWM_WIDTH_ABSMAX_US 	&& pulse >= PWM_WIDTH_ABSMIN_US &&
 				 period <= PWM_PERIOD_MAX_US	&& period >= PWM_PERIOD_MIN_US )
 			{

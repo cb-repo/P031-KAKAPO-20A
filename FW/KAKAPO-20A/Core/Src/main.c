@@ -81,7 +81,6 @@ int main ( void ) {
 		BATT_Update();
 		TEMP_Update();
 		RADIO_Update();
-		SERVO_Update();
 		CORE_Idle();
 	}
 

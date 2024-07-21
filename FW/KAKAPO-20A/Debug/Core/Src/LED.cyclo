@@ -1,11 +1,8 @@
-../STM32X/Lib/GPIO.inl.h:16:20:GPIO_Deinit	1
-../STM32X/Lib/GPIO.inl.h:21:20:GPIO_EnableOutput	1
-../STM32X/Lib/Core.inl.h:12:24:CORE_GetTick	1
 ../Core/Src/LED.c:53:6:LED_Init	1
 ../Core/Src/LED.c:70:6:LED_Deinit	1
 ../Core/Src/LED.c:87:6:LED_Update	12
-../Core/Src/LED.c:165:6:LED_pulseOutputs	2
-../Core/Src/LED.c:190:6:LED_calibUpdate	1
+../Core/Src/LED.c:165:6:LED_pulseOutputs	3
+../Core/Src/LED.c:190:6:LED_calibUpdate	3
 ../Core/Src/LED.c:208:6:LED_getState_M1	1
 ../Core/Src/LED.c:220:6:LED_getState_M2	1
 ../Core/Src/LED.c:232:6:LED_updateOutput_M1	2

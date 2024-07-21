@@ -1,2 +1,2 @@
-../Modules/Utils/FPROM/FPROM.c:31:6:FPROM_Read	32	static
-../Modules/Utils/FPROM/FPROM.c:38:6:FPROM_Write	296	static
+../Modules/Utils/FPROM/FPROM.c:31:6:FPROM_Read	16	static
+../Modules/Utils/FPROM/FPROM.c:38:6:FPROM_Write	280	static

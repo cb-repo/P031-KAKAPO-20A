@@ -4,7 +4,7 @@
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:270:19:HAL_RTCEx_GetTimeStamp	2
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:320:13:HAL_RTCEx_TimeStampEventCallback	1
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:336:6:HAL_RTCEx_TimeStampIRQHandler	2
-../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:364:19:HAL_RTCEx_PollForTimeStampEvent	7
+../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:364:19:HAL_RTCEx_PollForTimeStampEvent	9
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:448:19:HAL_RTCEx_SetSmoothCalib	5
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:522:19:HAL_RTCEx_SetSynchroShift	8
 ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rtc_ex.c:624:19:HAL_RTCEx_SetCalibrationOutPut	2

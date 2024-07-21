@@ -64,14 +64,14 @@ void SERVO_Init(void)
 	TIM_Start(			TIM_SERVO_S1 );
 
 	// ENABLE SERVO 2 OUTPUT
-	#if SERVO_NUM_OUTPUTS >= 2
+#if SERVO_NUM_OUTPUTS >= 2
 	GPIO_EnableOutput(	SERVO_S2_Pin, GPIO_PIN_RESET );
 	TIM_Init(			TIM_SERVO_S2, TIM_SERVO_S2_FREQ, TIM_SERVO_S2_RELOAD );
 	TIM_OnReload(		TIM_SERVO_S2, SERVO_S2_TimerReloadISR );
 	TIM_OnPulse(		TIM_SERVO_S2, 0, SERVO_S2_TimerPulseISR );
 	TIM_SetPulse( 		TIM_SERVO_S2, 0, 0 );
 	TIM_Start(			TIM_SERVO_S2 );
-	#endif
+#endif
 }
 
 
@@ -89,11 +89,11 @@ void SERVO_Deinit(void)
 	GPIO_Write(	SERVO_S1_Pin, GPIO_PIN_RESET );
 
 	//
-	#if SERVO_NUM_OUTPUTS >= 2
+#if SERVO_NUM_OUTPUTS >= 2
 	TIM_Stop(	TIM_SERVO_S2 );
 	TIM_Deinit(	TIM_SERVO_S2 );
 	GPIO_Write(	SERVO_S2_Pin, GPIO_PIN_RESET );
-	#endif
+#endif
 }
 
 
@@ -108,6 +108,8 @@ void SERVO_Update ( void )
 	//
 	bool fault = ( TEMP_inFaultState() || BATT_inFaultState() || RADIO_inFaultStateANY() );
 	static bool fault_p = true;
+	static uint32_t servoS1_p;
+	static uint32_t servoS2_p;
 
 	// FAULT CONDITION - RISING EDGE
 	if ( fault && fault_p )
@@ -129,14 +131,22 @@ void SERVO_Update ( void )
 
 		// CHECK FOR AND SERVICE CHANNEL REVERSE
 		if ( config.servoS1_rev ) { servoS1 = SERVO_ReverseRadio( servoS1 ); }
-
-		// UPDATE SERVO
-		TIM_SetPulse( TIM_SERVO_S1, 0, servoS1 );
+		//
+		if ( servoS1 != servoS1_p )
+		{
+			// UPDATE SERVO
+			TIM_SetPulse( TIM_SERVO_S1, 0, servoS1 );
+			//
+			servoS1_p = servoS1;
+		}
 
 		#if SERVO_NUM_OUTPUTS >= 2
 		uint32_t servoS2 = dataPtr->ch[config.servoS2_ch];
 		if ( config.servoS2_rev ) { servoS2 = SERVO_ReverseRadio( servoS2 ); }
-		TIM_SetPulse( TIM_SERVO_S2, 0, servoS2 );
+		if ( servoS2 != servoS2_p ) {
+			TIM_SetPulse( TIM_SERVO_S2, 0, servoS2 );
+			servoS2_p = servoS2;
+		}
 		#endif
 	}
 
