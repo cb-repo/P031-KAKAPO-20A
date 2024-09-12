@@ -1,4 +1,4 @@
-../STM32X/Lib/ADC.c:178:6:ADC_Init	4
+../STM32X/Lib/ADC.c:179:6:ADC_Init	4
 ../STM32X/Lib/ADC.c:221:10:ADC_SetFreq	9
 ../STM32X/Lib/ADC.c:259:10:ADC_Read	2
 ../STM32X/Lib/ADC.c:278:6:ADC_Deinit	4
