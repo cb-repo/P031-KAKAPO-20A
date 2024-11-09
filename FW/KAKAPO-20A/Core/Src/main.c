@@ -7,7 +7,8 @@
 /* PRIVATE DEFINITIONS									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#define CONFIG_HASH_A					0x8ca86463
+
+#define CONFIG_HASH_A					0x8ca86473
 #define CONFIG_HASH_B					(CONFIG_HASH_A + 1)
 
 #define CALIBRATE_STARTUP_TIMEOUT		10000
@@ -60,7 +61,8 @@ static RADIO_Data* dataPtr = 0;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-int main ( void ) {
+int main ( void )
+{
 	// STARTUP PROCEDURE
 	CORE_Init();
 	SYSTEM_Init();
@@ -72,7 +74,7 @@ int main ( void ) {
 	MOTOR_Init();
 	SERVO_Init();
 
-	CORE_Delay(900); // Not noticible to people but should allow voltage recovery. Could update this to only happen under brownout condition
+	CORE_Delay(900); // Allow for voltage recovery. Could update this to only happen under brownout condition
 
 	BATT_Init();
 
@@ -136,8 +138,10 @@ void SYSTEM_Init ( void )
 		config.motorA_rev = 		false;
 		config.motorB_ch = 			1;
 		config.motorB_rev = 		false;
+		config.servoS1_en = 		true;
 		config.servoS1_ch =			2;
 		config.servoS1_rev = 		false;
+		config.servoS2_en = 		true;
 		config.servoS2_ch =			3;
 		config.servoS2_rev = 		false;
 		config.hashB = 				CONFIG_HASH_B;
@@ -202,7 +206,7 @@ static bool SYSTEM_initiateCalibration ( void )
 	bool 						retVal 							= false;
 	bool 						fault 							= (TEMP_inFaultState() || BATT_inFaultState() || RADIO_inFaultStateANY());
 
-	// ONLY PROCEED IF THERE IS A RADIO DETECTED
+	// ONLY PROCEED IF THERE ARE NO FAULTS
 	if ( !fault )
 	{
 		// ITTERATE THROUGH EACH AVALIBLE RADIO CHANNEL
@@ -287,22 +291,34 @@ static void SYSTEM_runCalibration (void)
 //	}
 
 	//
-	LED_calibUpdate( false, false );
-	CORE_Delay( CALIBRATE_INPUT_DELAY );
-	LED_calibUpdate( true, false );
-	SYSTEM_calibrationServoS1();
-	LED_calibUpdate( true, true );
-	SYSTEM_wait_ResetInputs();
-	LED_pulseOutputs( 3 );
+	if ( RADIO_getValidChCount() >= 3 )
+	{
+		//
+		LED_calibUpdate( false, false );
+		CORE_Delay( CALIBRATE_INPUT_DELAY );
+		LED_calibUpdate( true, false );
+		SYSTEM_calibrationServoS1();
+		LED_calibUpdate( true, true );
+		SYSTEM_wait_ResetInputs();
+		LED_pulseOutputs( 3 );
+		//
+		LED_calibUpdate( false, false );
+		CORE_Delay( CALIBRATE_INPUT_DELAY );
+		LED_calibUpdate( true, false );
+		SYSTEM_calibrationServoS2();
+		LED_calibUpdate( true, true );
+		SYSTEM_wait_ResetInputs();
+		LED_pulseOutputs( 3 );
 
-	//
-	LED_calibUpdate( false, false );
-	CORE_Delay( CALIBRATE_INPUT_DELAY );
-	LED_calibUpdate( true, false );
-	SYSTEM_calibrationServoS2();
-	LED_calibUpdate( true, true );
-	SYSTEM_wait_ResetInputs();
-	LED_pulseOutputs( 3 );
+		config.servoS1_en = true;
+		config.servoS2_en = true;
+	}
+	else
+	{
+		//
+		config.servoS1_en = false;
+		config.servoS2_en = false;
+	}
 
 	// WRITE CONFIG BACK FOR FLASH
 	FPROM_Write( CONFIG_FPROM_OFFSET, &config, sizeof(config) );

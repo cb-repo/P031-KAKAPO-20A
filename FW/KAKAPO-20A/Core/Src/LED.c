@@ -39,6 +39,11 @@ void LED_toggleOutput_M2 	( void );
 /* PRIVATE VARIABLES									*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+static CONFIG_data 	config 	= {0};
+static RADIO_Data* 	dataPtr	= 0;
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PUBLIC FUNCTIONS										*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -47,11 +52,17 @@ void LED_toggleOutput_M2 	( void );
 /*
  * HANDLES INITIALISATION OF LED MODULE
  *
- * INPUTS:
- * OUTPUTS:
+ * INPUTS: N/A
+ * OUTPUTS: N/A
  */
 void LED_Init (void)
 {
+	// RETRIEVE CONFIG FROM FLASH
+	FPROM_Read( CONFIG_FPROM_OFFSET, &config, sizeof(config) );
+
+	// RETRIEVE POINTER TO RADIO DATA
+	dataPtr = RADIO_getDataPtr();
+
 	#if defined(LED_PWR_Pin)
 	GPIO_EnableOutput(LED_PWR_Pin, LED_ON);
 	#endif
@@ -64,8 +75,8 @@ void LED_Init (void)
 /*
  * HANDLES DEINITIALISATION OF LED MODULE
  *
- * INPUTS:
- * OUTPUTS:
+ * INPUTS: N/A
+ * OUTPUTS: N/A
  */
 void LED_Deinit (void)
 {
@@ -79,7 +90,7 @@ void LED_Deinit (void)
 
 
 /*
- * TEXT
+ * HANDLES
  *
  * INPUTS:
  * OUTPUTS:
@@ -123,7 +134,7 @@ void LED_Update ( void )
 	}
 
 	// FAULT CONDITION - SIGNAL LOST
-	else if ( RADIO_inFaultStateANY() )
+	else if ( dataPtr->inputLostCh[ config.servoS1_ch ] && dataPtr->inputLostCh[ config.servoS2_ch ] && (dataPtr->inputLostCh[ config.motorA_ch ] || dataPtr->inputLostCh[ config.motorB_ch ]) ) //RADIO_inFaultStateFULL() )
 	{
 		if ( (now - tick) >= (2*FAULT_INPUT_MS) ) {
 			tick = now;

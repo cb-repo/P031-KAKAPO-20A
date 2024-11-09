@@ -250,7 +250,7 @@ void MOTOR_Update ( void )
 	uint32_t driveB;
 
 	//
-	if ( TEMP_inFaultState() || BATT_inFaultState() || RADIO_inFaultStateANY() )
+	if ( TEMP_inFaultState() || BATT_inFaultState() || dataPtr->inputLostCh[ config.motorA_ch ] || dataPtr->inputLostCh[ config.motorB_ch ]  )
 	{
 		driveA = PULSE_WIDTH_CENTER_US;
 		driveB = PULSE_WIDTH_CENTER_US;

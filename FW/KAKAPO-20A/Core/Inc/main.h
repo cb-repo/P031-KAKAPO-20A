@@ -78,9 +78,11 @@ typedef struct {
 
 	uint32_t			servoS1_ch;
 	bool				servoS1_rev;
+	bool 				servoS1_en;
 
 	uint32_t			servoS2_ch;
 	bool				servoS2_rev;
+	bool 				servoS2_en;
 
 	uint32_t 			hashB;
 } CONFIG_data;

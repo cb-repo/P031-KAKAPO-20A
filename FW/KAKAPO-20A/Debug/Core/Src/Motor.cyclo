@@ -4,7 +4,7 @@
 ../Core/Src/Motor.c:699:6:MOTOR_PulseM2_ISR	4
 ../Core/Src/Motor.c:99:6:MOTOR_Init	1
 ../Core/Src/Motor.c:235:6:MOTOR_Deinit	1
-../Core/Src/Motor.c:247:6:MOTOR_Update	73
+../Core/Src/Motor.c:247:6:MOTOR_Update	87
 ../Core/Src/Motor.c:326:6:MOTOR_getConfig	1
 ../Core/Src/Motor.c:338:6:MOTOR_M1_isActive	1
 ../Core/Src/Motor.c:350:6:MOTOR_M2_isActive	1

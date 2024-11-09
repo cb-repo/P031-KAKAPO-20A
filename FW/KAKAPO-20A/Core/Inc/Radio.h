@@ -61,6 +61,7 @@ RADIO_Data* RADIO_getDataPtr		( void );
 bool 		RADIO_inFaultState   	( void );
 bool 		RADIO_inFaultStateFULL	( void );
 bool 		RADIO_inFaultStateANY	( void );
+uint8_t 	RADIO_getValidChCount 	( void );
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

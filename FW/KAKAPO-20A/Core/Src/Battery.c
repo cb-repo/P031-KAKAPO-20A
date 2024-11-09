@@ -56,7 +56,7 @@ static uint32_t BATT_calc 			( void );
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-static bool		faultVolt = false;
+static bool		fault = false;
 static uint32_t faultVolt_set;
 static uint32_t faultVolt_reset;
 
@@ -109,7 +109,7 @@ void BATT_Init ( void )
 	}
 
 	// SET RELEVANT FLAGS
-	faultVolt = false;
+	fault = false;
 }
 
 
@@ -124,7 +124,7 @@ void BATT_Deinit ( void )
 	// DEINITIALISE BATTERY VOLTAGE DETECT PIN
 	GPIO_Deinit( BATT_Pin );
 	// RESET RELEVANT FLAGS
-	faultVolt = false;
+	fault = false;
 }
 
 
@@ -145,7 +145,7 @@ void BATT_Update ( void )
 	uint32_t volt = BATT_calc();
 
 	// NORMAL OPERATION
-	if ( !faultVolt && !intFault )
+	if ( !fault && !intFault )
 	{
 		// CHECK FOR UNDERVOLTAGE CONDITION
 		if ( volt <= faultVolt_set ) {
@@ -171,7 +171,7 @@ void BATT_Update ( void )
 			if ( (now - tick) >= FAULT_SET_MS ) {
 				// ESCALLATE TO FULL FAULT CONDITION
 				intFault = false;
-				faultVolt = true;
+				fault = true;
 				setTick = false;
 			}
 		}
@@ -190,7 +190,7 @@ void BATT_Update ( void )
 			// CHECK IF RECOVERED FOR LONG ENOUGH
 			else if ( ( now - tick ) >= FAULT_RESET_MS ) {
 				// RESET FAULT FLAGS
-				faultVolt = false;
+				fault = false;
 				setTick = false;
 			}
 		}
@@ -213,7 +213,7 @@ void BATT_Update ( void )
  */
 bool BATT_inFaultState ( void )
 {
-	return faultVolt;
+	return fault;
 }
 
 

@@ -1,8 +1,8 @@
-../Core/Src/Servo.c:241:13:SERVO_S2_TimerPulseISR	1
-../Core/Src/Servo.c:214:13:SERVO_S1_TimerPulseISR	1
-../Core/Src/Servo.c:227:13:SERVO_S2_TimerReloadISR	1
-../Core/Src/Servo.c:202:13:SERVO_S1_TimerReloadISR	1
-../Core/Src/Servo.c:50:6:SERVO_Init	1
-../Core/Src/Servo.c:84:6:SERVO_Deinit	1
-../Core/Src/Servo.c:106:6:SERVO_Update	10
-../Core/Src/Servo.c:164:6:SERVO_getConfig	1
+../Core/Src/Servo.c:277:13:SERVO_S1_TimerPulseISR	1
+../Core/Src/Servo.c:304:13:SERVO_S2_TimerPulseISR	1
+../Core/Src/Servo.c:265:13:SERVO_S1_TimerReloadISR	1
+../Core/Src/Servo.c:290:13:SERVO_S2_TimerReloadISR	1
+../Core/Src/Servo.c:57:6:SERVO_Init	3
+../Core/Src/Servo.c:86:6:SERVO_Deinit	1
+../Core/Src/Servo.c:104:6:SERVO_Update	37
+../Core/Src/Servo.c:170:6:SERVO_getConfig	1
