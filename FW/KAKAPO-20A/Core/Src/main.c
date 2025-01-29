@@ -11,7 +11,7 @@
 #define CONFIG_HASH_A					0x8ca86473
 #define CONFIG_HASH_B					(CONFIG_HASH_A + 1)
 
-#define CALIBRATE_STARTUP_TIMEOUT		10000
+#define CALIBRATE_STARTUP_TIMEOUT		20000
 #define CALIBRATE_INPUT_WIGGLE			20
 #define CALIBRATE_TEST_DELAY			1000
 #define CALIBRATE_INPUT_DELAY			250
@@ -190,6 +190,9 @@ static void SYSTEM_Update ( void )
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* PRIVATE FUNCTIONS - CONFIG 							*/
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+// TODO: Make sure can still operate if and channel is lost.. only die if all channels disappear
 
 
 /*
@@ -678,6 +681,7 @@ static void SYSTEM_wait_ResetInputs ( void )
 	}
 }
 
+// TODO: Count inputs even when the sticks dont start at 0
 
 /*
  * COUNTS AND RETURNS NUMBER OF THE RADIO INPUTS ARE ACTIVE
